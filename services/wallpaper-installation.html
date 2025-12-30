@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Luxe Wallpaper & Vinyl
+    </title> <!-- 1 ЗМІНА -->
+
+    <!-- responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- master stylesheet -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Responsive stylesheet -->
+    <link rel="stylesheet" href="/css/responsive.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        .service-hero {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            overflow: hidden;
+        }
+
+        .service-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .service-hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+        }
+
+        .service-title {
+            color: white;
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            margin: 0;
+            padding: 20px 40px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            display: inline-block;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .service-hero {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            overflow: hidden;
+        }
+
+        .service-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .service-hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+        }
+
+        .service-title {
+            color: white;
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            margin: 0;
+            padding: 20px 40px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            display: inline-block;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .service-content {
+    padding: 40px 0;
+    background: #f8f9fa;
+}
+
+.content-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.content-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.text-content p {
+    font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
+
+.image-content {
+    flex: 1;
+}
+
+.image-content img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.steps-section {
+    margin-top: 40px;
+}
+
+.steps-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.step {
+    margin-bottom: 30px;
+}
+
+.step-number {
+    background: #d4ac64;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.step-content h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.step-content p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .image-content img {
+        height: 250px;
+    }
+}
+
+
+.footer {
+    background: #2a2a2a;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.footer-section p {
+    margin: 8px 0;
+    color: #ccc;
+}
+
+.quote-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1em;
+}
+
+.quote-btn:hover {
+    background: #0056b3;
+}
+
+.footer-dropdown {
+    position: relative;
+}
+
+.dropdown-trigger {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0 !important;
+}
+
+.arrow {
+    font-size: 0.7em;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .footer-dropdown:hover .dropdown-content {
+        display: block;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        background: #2a2a2a;
+        min-width: 250px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        z-index: 1000;
+    }
+    
+    .locations-dropdown {
+        min-width: 500px;
+    }
+    
+    .locations-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .location-group h4 {
+        color: #fff;
+        margin: 0 0 10px 0;
+        font-size: 0.9em;
+        border-bottom: 1px solid #444;
+        padding-bottom: 5px;
+    }
+    
+    .dropdown-content a {
+        display: block;
+        color: #ccc;
+        text-decoration: none;
+        padding: 5px 0;
+        font-size: 0.9em;
+    }
+    
+    .dropdown-content a:hover {
+        color: #fff;
+    }
+    
+    .footer-dropdown:hover .arrow {
+        transform: rotate(180deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .dropdown-content {
+        padding-left: 15px;
+    }
+    
+    .footer-dropdown.active .dropdown-content {
+        display: block;
+    }
+    
+    .footer-dropdown.active .arrow {
+        transform: rotate(180deg);
+    }
+    
+    .locations-grid {
+        display: block;
+    }
+    
+    .location-group {
+        margin-bottom: 20px;
+    }
+    
+    .location-group h4 {
+        color: #ccc;
+        margin: 15px 0 8px 0;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .dropdown-trigger {
+        background: #333;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 10px !important;
+    }
+    
+    .dropdown-content {
+        display: none;
+        padding: 0 15px 15px 15px;
+        background: #333;
+        border-radius: 0 0 5px 5px;
+        margin-top: -10px;
+    }
+    
+    .footer-dropdown.active .dropdown-content {
+        display: block;
+    }
+    
+    .footer-dropdown.active .dropdown-trigger {
+        border-radius: 5px 5px 0 0;
+        margin-bottom: 0 !important;
+    }
+    
+    .footer-dropdown.active .arrow {
+        transform: rotate(180deg);
+    }
+    
+    .locations-grid {
+        display: block;
+    }
+    
+    .location-group {
+        margin-bottom: 20px;
+    }
+    
+    .location-group h4 {
+        color: #fff;
+        margin: 20px 0 10px 0;
+        font-size: 1em;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #555;
+    }
+    
+    .dropdown-content a {
+        display: block;
+        color: #ccc;
+        text-decoration: none;
+        padding: 8px 0;
+        border-bottom: 1px solid #444;
+    }
+    
+    .dropdown-content a:last-child {
+        border-bottom: none;
+    }
+    
+    .dropdown-content a:hover {
+        color: #fff;
+    }
+}
+
+.mobile-areas-section {
+    width: 100%;
+}
+
+.mobile-areas-title {
+    padding: 16px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-areas-title::after {
+    content: '▶';
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-areas-section.active .mobile-areas-title::after {
+    transform: rotate(90deg);
+}
+
+.mobile-areas-list {
+    display: none;
+    padding: 0;
+}
+
+.mobile-areas-section.active .mobile-areas-list {
+    display: block;
+}
+
+.mobile-area-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+.mobile-area-group a {
+    display: block;
+    padding: 6px 0;
+    text-decoration: none;
+    font-size: 13px;
+}
+    </style>
+
+
+    <meta name="description"
+        content="Luxe Wallpaper & Vinyl begin by observing how each interior reflects the city’s blend of new construction, renovated older homes, eclectic design preferences, and abundant natural light, noting where walls show texture inconsistencies, settling marks, or layers of past finishes that may influence how new wallcovering will appear once installed. After these details are evaluated, the surfaces are prepared to a smooth and stable state that supports even adhesion and ensures consistent clarity in both color and pattern. The installation then proceeds with a calm and precise rhythm that allows each panel to settle naturally, creating clean edges, soft transitions, and a unified visual flow that suits the creative and contemporary character of Austin interiors. The completed work feels cohesive, durable, and thoughtfully integrated into the home, and the entire process is handled quietly so daily routines continue uninterrupted and the space remains fully functional throughout the project.">
+    <!-- 2 ЗМІНА -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "Organization",
+            "name": "Dallas Wallpaper Installations",  
+            "url": "https://dallaswallpaperinstallations.com"    
+        }
+        </script> <!-- 3 ЗМІНА -->
+
+    <!-- Fixing Internet Explorer-->
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <section class="top-bar-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-7">
+                <div class="contact-info-left clearfix">
+                    <ul>
+
+                        <li>
+                            <a href="index.html" class="logo"><img src="images/LW logo 50x100px.png" alt="Luxe Wallpaper & Vinyl" ></a>
+                        </li>
+                        <li>
+                            <a href="/index.html" class="nav-link">Home</a>
+                        </li>
+
+                        <li class="areas-trigger-item">
+                            <div class="areas-trigger">
+                                <span class="areas-title">Locations</span>
+                                <span class="dropdown-arrow">▼</span>
+                                <div class="areas-dropdown">
+                                    <div class="dropdown-grid">
+                                        <div class="area-column">
+                                           <h4>Central Austin</h4>
+                                           <a href="/index.html">Austin</a>
+                                           <a href="/locations/downtown.html">Downtown</a>
+                                           <a href="/locations/university-of-texas.html">University of Texas</a>
+                                           <a href="/locations/west-university.html">West University</a>
+                                           <a href="/locations/hyde-park.html">Hyde Park</a>
+                                        </div>
+                                        <div class="area-column">
+                                            <h4>North Austin</h4>
+                                            <a href="/locations/north-austin.html">North Austin</a>
+                                            <a href="/locations/allandale.html">Allandale</a>
+                                            <a href="/locations/brentwood.html">Brentwood</a>
+                                            <a href="/locations/north-lamar.html">North Lamar</a>
+                                            <a href="/locations/georgian-acres.html">Georgian Acres</a>
+                                            <a href="/locations/heritage-hills.html">Heritage Hills</a>
+                                        </div>
+                                        <div class="area-column">
+                                            <h4>East Austin</h4>
+                                            <a href="/locations/windsor-park.html">Windsor Park</a>
+                                            <a href="/locations/windsor-hills.html">Windsor Hills</a>
+                                            <a href="/locations/pleasant-valley.html">Pleasant Valley</a>
+                                            <a href="/locations/montopolis.html">Montopolis</a>
+                                            <a href="/locations/riverside.html">Riverside</a>
+                                            <a href="/locations/rose-dale.html">Rosedale</a>
+                                        </div>
+                                        <div class="area-column">
+                                            <h4>South Austin</h4>
+                                            <a href="/locations/south-lamar.html">South Lamar</a>
+                                            <a href="/locations/zilker.html">Zilker</a>
+                                            <a href="/locations/barton-hills.html">Barton Hills</a>
+                                            <a href="/locations/garrison-park.html">Garrison Park</a>
+                                            <a href="/locations/parker-lane.html">Parker Lane</a>
+                                            <a href="/locations/south-manchaca.html">South Manchaca</a>
+                                            <a href="/locations/south-river-city.html">South River City</a>
+                                        </div>
+                                        <div class="area-column">
+                                            <h4>West & Outskirts</h4>
+                                            <a href="/locations/west-oak-hill.html">West Oak Hill</a>
+                                            <a href="/locations/east-oak-hill.html">East Oak Hill</a>
+                                            <a href="/locations/wells-branch.html">Wells Branch</a>
+                                            <a href="/locations/st-johns.html">St. Johns</a>
+                                            <a href="/locations/franklin-park.html">Franklin Park</a>
+                                            <a href="/locations/vineland.html">Vineland</a>
+                                            <a href="/locations/sweet-briar.html">Sweet Briar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>      <!--Зміна-->
+
+                        <li class="areas-trigger-item">
+                            <div class="areas-trigger">
+                                <span class="areas-title">Services</span>
+                                <span class="dropdown-arrow">▼</span>
+                                <div class="areas-dropdown services-dropdown">
+                                    <div class="dropdown-grid">
+                                        <div class="area-column">
+                                            <a href="/services/wallpaper-installation.html">Wallpaper Installation</a>
+                                            <a href="/services/wallpaper-removal.html">Wallpaper Removal</a>
+                                            <a href="/services/custom-wallpaper.html">Custom Wallpaper</a>
+                                        </div>
+                                        <div class="area-column">
+                                            <a href="/services/commercial-installation.html">Commercial Installation</a>
+                                            <a href="/services/accent-walls.html">Accent Walls</a>
+                                            <a href="/services/textured-walls.html">Textured Walls</a>
+                                        </div>
+                                        <div class="area-column">
+                                            <a href="/services/wall-prep.html">Wall Preparation</a>
+                                            <a href="/services/murals-installation.html">Murals Installation</a>
+                                            <a href="/services/grasscloth.html">Grasscloth Wallpaper</a>
+                                        </div>
+                                        <div class="area-column">
+                                            <a href="/services/vinyl-wallpaper.html">Vinyl Wallpaper</a>
+                                            <a href="/services/fabric-wallpaper.html">Fabric Wallpaper</a>
+                                            <a href="/services/border-installation.html">Border Installation</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="/portfolio.html" class="nav-link">Portfolio</a>
+                        </li>
+
+                        <li>
+                            <a href="/contact.html" class="nav-link">Contact</a>
+                        </li>
+
+                        <li>
+                            <a href="tel:+12542670001" class="phone-link"> <!--Зміна-->
+                                <span class="flaticon-technology"> (346) 352-2770</span> <!--Зміна-->
+                            </a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-5">
+                <div class="top-bar-btn-container">
+                    <a href="#quote" class="top-bar-quote-btn">Get Free Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="mobile-top-bar">
+    <div class="burger-icon" onclick="toggleTopBar()">
+        ☰
+    </div>
+    <div class="mobile-contact-info" id="mobileTopBar">
+        <ul>
+
+            <li>
+                            <a href="index.html" class="logo"><img src="images/LW logo 50x100px.png" alt="Luxe Wallpaper & Vinyl" ></a>
+                        </li>
+            <li>
+                <a href="/index.html" class="mobile-nav-link">Home</a>
+            </li>
+
+            <li class="mobile-areas-section" onclick="toggleMobileSection(this)">
+                <div class="mobile-areas-title">Locations</div>
+                <div class="mobile-areas-list">
+                    <div class="mobile-area-group">
+                        
+                        <a href="/index.html">Austin</a>
+                        <a href="/locations/downtown.html">Downtown</a>
+                        <a href="/locations/university-of-texas.html">University of Texas</a>
+                        <a href="/locations/west-university.html">West University</a>
+                        <a href="/locations/hyde-park.html">Hyde Park</a>
+                    
+                        
+                        <a href="/locations/north-austin.html">North Austin</a>
+                        <a href="/locations/allandale.html">Allandale</a>
+                        <a href="/locations/brentwood.html">Brentwood</a>
+                        <a href="/locations/north-lamar.html">North Lamar</a>
+                        <a href="/locations/georgian-acres.html">Georgian Acres</a>
+                        <a href="/locations/heritage-hills.html">Heritage Hills</a>
+                    
+                        
+                        <a href="/locations/windsor-park.html">Windsor Park</a>
+                        <a href="/locations/windsor-hills.html">Windsor Hills</a>
+                        <a href="/locations/pleasant-valley.html">Pleasant Valley</a>
+                        <a href="/locations/montopolis.html">Montopolis</a>
+                        <a href="/locations/riverside.html">Riverside</a>
+                        <a href="/locations/rose-dale.html">Rosedale</a>
+                    
+                        
+                         <a href="/locations/south-lamar.html">South Lamar</a>
+                         <a href="/locations/zilker.html">Zilker</a>
+                         <a href="/locations/barton-hills.html">Barton Hills</a>
+                         <a href="/locations/garrison-park.html">Garrison Park</a>
+                         <a href="/locations/parker-lane.html">Parker Lane</a>
+                         <a href="/locations/south-manchaca.html">South Manchaca</a>
+                         <a href="/locations/south-river-city.html">South River City</a>
+                    
+                        
+                        <a href="/locations/west-oak-hill.html">West Oak Hill</a>
+                        <a href="/locations/east-oak-hill.html">East Oak Hill</a>
+                        <a href="/locations/wells-branch.html">Wells Branch</a>
+                        <a href="/locations/st-johns.html">St. Johns</a>
+                        <a href="/locations/franklin-park.html">Franklin Park</a>
+                        <a href="/locations/vineland.html">Vineland</a>
+                        <a href="/locations/sweet-briar.html">Sweet Briar</a>
+                    </div>
+                </div>
+            </li> <!--Зміна-->
+
+            <li class="mobile-areas-section" onclick="toggleMobileSection(this)">
+                <div class="mobile-areas-title">Services </div>
+                <div class="mobile-areas-list">
+                    <div class="mobile-area-group">
+                        <a href="/services/wallpaper-installation.html">Wallpaper Installation</a>
+                        <a href="/services/wallpaper-removal.html">Wallpaper Removal</a>
+                        <a href="/services/custom-wallpaper.html">Custom Wallpaper</a>
+                        <a href="/services/commercial-installation.html">Commercial Installation</a>
+                        <a href="/services/accent-walls.html">Accent Walls</a>
+                        <a href="/services/textured-walls.html">Textured Walls</a>
+                        <a href="/services/wall-prep.html">Wall Preparation</a>
+                        <a href="/services/murals-installation.html">Murals Installation</a>
+                        <a href="/services/grasscloth.html">Grasscloth Wallpaper</a>
+                        <a href="/services/vinyl-wallpaper.html">Vinyl Wallpaper</a>
+                        <a href="/services/fabric-wallpaper.html">Fabric Wallpaper</a>
+                        <a href="/services/border-installation.html">Border Installation</a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <a href="/portfolio.html" class="mobile-nav-link">Portfolio</a>
+            </li>
+
+            <li>
+                <a href="/contact.html" class="mobile-nav-link">Contact</a>
+            </li>
+
+            <li>
+                <a href="tel:+12542670001" class="mobile-phone-link"> <!--Зміна-->
+                    <span class="flaticon-technology"> (346) 352-2770</span>  <!--Зміна-->
+                </a>
+            </li>
+        </ul>
+    </div>
+</div> 
+
+    <section class="service-hero">
+        <img src="/images/slides/111-800.webp" srcset="
+        /images/slides/111-800.webp 800w,
+        /images/slides/111-1500.webp 1500w,
+        /images/slides/111-3000.webp 3000w" sizes="(max-width: 768px) 800px, (max-width: 1920px) 1500px, 3000px"
+            width="3000" height="1582" alt="Luxe Wallpaper & Vinyl" loading="eager" decoding="async" />
+        <div class="service-hero-content">
+            <h1 class="service-title">Professional Wall Preparation Services</h1>
+        </div>
+    </section>
+
+
+<section class="service-content">
+    <div class="container">
+        <div class="content-section">
+            <div class="image-content">
+                <img src="/images/services2/wallpaper-installation1.jpg" alt="Wall Preparation">
+            </div>
+            <div class="text-content">
+                <p>Quality installation of wallpaper requires proper wall preparation, which is essential to the process. Our team of professionals inspects the wall and removes all cracks and irregularities, ensuring a smooth surface for the wallpaper installation. We apply prime to the walls, ensuring a strong bond between the wallpaper cloth and the wall. Our services are quick and efficient, and we operate in all areas. Our company's reputation relies on the feedback of our clients, and we are committed to ensuring their satisfaction.</p>
+            </div>
+        </div>
+
+        <div class="steps-section">
+            <h2>3 Steps to Prepare a Wall for Wallpaper</h2>
+            
+            <div class="content-section reverse">
+                <div class="image-content">
+                    <img src="/images/services2/wallpaper-installation2.jpg" alt="Wall Repair">
+                </div>
+                <div class="text-content">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <div class="step-content">
+                            <h3>Clean the walls</h3>
+                            <p>Use a damp cloth or sponge to clean the walls and remove any dirt, dust, or grease. Ensure the walls are completely dry before moving on to the next step.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <div class="step-content">
+                            <h3>Repair any damage</h3>
+                            <p>Inspect the walls for any cracks, holes, or other damage. Fill in any holes or cracks with spackling paste or joint compound, and sand the surface smooth. Remove any peeling paint with a scraper or sandpaper.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <div class="step-content">
+                            <h3>Prime the walls</h3>
+                            <p>Apply a primer to create a smooth surface and help the wallpaper adhere properly. Choose a primer that is suitable for the type of wallpaper you plan to use, and let it dry completely before hanging the wallpaper.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Стики-кнопка -->
+    <button class="sticky-btn" id="stickyBtn">
+        <i class="fas fa-phone-alt"></i> Get Free Quote
+    </button>
+
+    <div class="feedback-form-container" id="quote">
+        <h3>Get Your Free Wallpaper Quote</h3>
+        <form id="wallpaperContactForm" class="contact-form" action="/send.php" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phoneInput" name="phone" value="+1 (" placeholder="+1 (XXX) XXX-XXXX"
+                        required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="city" placeholder="City" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea name="message"
+                    placeholder="Tell us about your project (room type, square footage, desired wallpaper style)"></textarea>
+            </div>
+
+            <div class="g-recaptcha" data-sitekey="6LcvmiwsAAAAAFrHzOi8I6nUP-joxr3jHIL9Wz-J"></div> <!--Зміна-->
+
+            <div class="form-submit">
+                <button type="submit" class="submit-btn">Send Request</button>
+
+            </div>
+        </form>
+        <div id="form-success" style="display: none;">
+            <p>We'll get back to you within 1 business day. Your info stays private.</p>
+        </div>
+    </div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>7119 FM 1464 Ste 160 Richmond TX 77407</p>
+            <p> (346) 352-2770</p>
+            <p>info@luxewallpapersvinyl.com</p>
+        </div>
+
+        <div class="footer-section">
+            <div class="footer-dropdown">
+                <h3 class="dropdown-trigger">
+                    Services
+                    <span class="arrow">▼</span>
+                </h3>
+                <div class="dropdown-content">
+                    <a href="/services/wallpaper-installation.html">Wallpaper Installation</a>
+                    <a href="/services/wallpaper-removal.html">Wallpaper Removal</a>
+                    <a href="/services/custom-wallpaper.html">Custom Wallpaper</a>
+                    <a href="/services/commercial-installation.html">Commercial Installation</a>
+                    <a href="/services/accent-walls.html">Accent Walls</a>
+                    <a href="/services/textured-walls.html">Textured Walls</a>
+                    <a href="/services/wall-prep.html">Wall Preparation</a>
+                    <a href="/services/murals-installation.html">Murals Installation</a>
+                    <a href="/services/grasscloth.html">Grasscloth Wallpaper</a>
+                    <a href="/services/vinyl-wallpaper.html">Vinyl Wallpaper</a>
+                    <a href="/services/fabric-wallpaper.html">Fabric Wallpaper</a>
+                    <a href="/services/border-installation.html">Border Installation</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <div class="footer-dropdown">
+                <h3 class="dropdown-trigger">
+                    Locations
+                    <span class="arrow">▼</span>
+                </h3>
+                <div class="dropdown-content locations-dropdown">
+                    <div class="locations-grid">
+                        <div class="location-group">
+                            <h4>Central Austin</h4>
+                    <a href="/index.html">Austin</a>
+                    <a href="/locations/downtown.html">Downtown</a>
+                    <a href="/locations/university-of-texas.html">University of Texas</a>
+                    <a href="/locations/west-university.html">West University</a>
+                    <a href="/locations/hyde-park.html">Hyde Park</a>
+                </div>  
+                <div class="location-group">
+                    <h4>North Austin</h4>
+                    <a href="/locations/north-austin.html">North Austin</a>
+                    <a href="/locations/allandale.html">Allandale</a>
+                    <a href="/locations/brentwood.html">Brentwood</a>
+                    <a href="/locations/north-lamar.html">North Lamar</a>
+                    <a href="/locations/georgian-acres.html">Georgian Acres</a>
+                    <a href="/locations/heritage-hills.html">Heritage Hills</a>
+                </div>  
+                <div class="location-group">
+                    <h4>East Austin</h4>
+                    <a href="/locations/windsor-park.html">Windsor Park</a>
+                    <a href="/locations/windsor-hills.html">Windsor Hills</a>
+                    <a href="/locations/pleasant-valley.html">Pleasant Valley</a>
+                    <a href="/locations/montopolis.html">Montopolis</a>
+                    <a href="/locations/riverside.html">Riverside</a>
+                    <a href="/locations/rose-dale.html">Rosedale</a>
+                </div>  
+                <div class="location-group">
+                    <h4>South Austin</h4>
+                    <a href="/locations/south-lamar.html">South Lamar</a>
+                    <a href="/locations/zilker.html">Zilker</a>
+                    <a href="/locations/barton-hills.html">Barton Hills</a>
+                    <a href="/locations/garrison-park.html">Garrison Park</a>
+                    <a href="/locations/parker-lane.html">Parker Lane</a>
+                    <a href="/locations/south-manchaca.html">South Manchaca</a>
+                    <a href="/locations/south-river-city.html">South River City</a>
+                </div>  
+                <div class="location-group">
+                    <h4>West & Outskirts</h4>
+                    <a href="/locations/west-oak-hill.html">West Oak Hill</a>
+                    <a href="/locations/east-oak-hill.html">East Oak Hill</a>
+                    <a href="/locations/wells-branch.html">Wells Branch</a>
+                    <a href="/locations/st-johns.html">St. Johns</a>
+                    <a href="/locations/franklin-park.html">Franklin Park</a>
+                    <a href="/locations/vineland.html">Vineland</a>
+                    <a href="/locations/sweet-briar.html">Sweet Briar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+        <section class="footer-bottom-area">
+
+            <div class="container text-center">
+                <p>© 2025 Luxe Wallpaper & Vinyl</p>
+                <!-- 29 ЗМІНА -->
+
+            </div>
+        </section>
+        <!--End footer bottom area-->
+
+        <!--Scroll to top-->
+        <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+        <!-- main jQuery -->
+        <script src="/js/jquery-1.11.1.min.js"></script>
+        <!-- bootstrap -->
+        <script src="/js/bootstrap.min.js"></script>
+        <!-- bx slider -->
+
+        <!-- count to -->
+
+
+        <!-- validate -->
+        <!-- mixit up -->
+        <!-- easing -->
+        <!-- gmap helper -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHzPSV2jshbjI8fqnC_C4L08ffnj5EN3A"></script>
+        <!--gmap script-->
+
+        <!-- jQuery ui js -->
+        <script src="/assets/jquery-ui-1.11.4/jquery-ui.js"></script>
+        <script src="/js/form-validation.js"></script>
+        <script src="/js/portfolio.js"></script>
+        <script src="/js/faq.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="/js/slider.js"></script>
+        <script src="/js/sticky-button.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <!-- revolution slider js -->
+
+
+
+
+
+
+
+        <!-- thm custom script -->
+        <script src="/js/custom.js"></script>
+
+
+
+
+
+
+</body>
+
+<script>
+    function toggleTopBar() {
+        var panel = document.getElementById("mobileTopBar");
+        panel.style.display = (panel.style.display === "block") ? "none" : "block";
+    }
+
+    function toggleMobileAreas(element) {
+        element.classList.toggle('active');
+    }
+
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.mobile-areas-item')) {
+            document.querySelectorAll('.mobile-areas-trigger').forEach(function (trigger) {
+                trigger.classList.remove('active');
+            });
+        }
+    });
+
+    function toggleMobileSection(section) {
+        section.classList.toggle('active');
+    }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+    
+    dropdownTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                const dropdown = this.parentElement;
+                const isActive = dropdown.classList.contains('active');
+                
+                document.querySelectorAll('.footer-dropdown').forEach(d => {
+                    d.classList.remove('active');
+                });
+                
+                if (!isActive) {
+                    dropdown.classList.add('active');
+                }
+            }
+        });
+    });
+    
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            if (!e.target.closest('.footer-dropdown')) {
+                document.querySelectorAll('.footer-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        }
+    });
+    
+    document.querySelectorAll('.dropdown-content').forEach(content => {
+        content.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.stopPropagation();
+            }
+        });
+    });
+});
+</script>
+
+</html>
