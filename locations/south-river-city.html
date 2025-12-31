@@ -396,7 +396,7 @@
             "@context": "http://schema.org/",
             "@type": "Organization",
             "name": "Luxe Wallpaper & Vinyl",  
-            "url": "austin-wallpaper-installers.com"    
+            "url": "Richmond-wallpaper-installers.com"    
         }
         </script> <!-- 3 ЗМІНА -->
 
@@ -408,8 +408,36 @@
 </head>
 
 <body>
+<!-- Mobile Header Bar - Always Visible -->
+    <div class="mobile-header-bar mobile-nav-bar">
+        <div class="mobile-logo">
+            <a href="../index.html">
+                <img src="../images/logo.png" alt="Luxe Wallpaper & Vinyl Logo">
+            </a>
+        </div>
+        <div class="mobile-nav-toggler" onclick="toggleTopBar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
 
-      <section class="top-bar-area">
+    <!-- Mobile Menu Container -->
+    <div id="mobileTopBar" class="mobile-top-bar-container" style="display:none;">
+        <nav class="mobile-menu-nav">
+            <ul class="mobile-menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#locations">Locations</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="tel:+12542670001" class="mobile-phone-link">(346) 352-2770</a></li>
+                <li><a href="#quote" class="mobile-quote-btn">Get Free Quote</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="main-menu-wrapper top-bar-area">>
     <div class="container">
         <div class="row">
             <div class="col-lg-7 col-md-7">
@@ -423,53 +451,48 @@
                             <div class="areas-trigger">
                                 <span class="areas-title">Locations</span>
                                 <span class="dropdown-arrow">▼</span>
-                                <div class="areas-dropdown">
+                                                                <div class="areas-dropdown">
                                     <div class="dropdown-grid">
                                         <div class="area-column">
-                                           <h4>Central Austin</h4>
-                                           <a href="/index.html">Austin</a>
-                                           <a href="/locations/downtown.html">Downtown</a>
-                                           <a href="/locations/university-of-texas.html">University of Texas</a>
-                                           <a href="/locations/west-university.html">West University</a>
-                                           <a href="/locations/hyde-park.html">Hyde Park</a>
+                                           <h4>Central Houston</h4>
+                                           <a href="../locations/downtown.html">Downtown</a>
+                                           <a href="../locations/midtown.html">Midtown</a>
+                                           <a href="../locations/montrose.html">Montrose</a>
+                                           <a href="../locations/museum-district.html">Museum District</a>
                                         </div>
                                         <div class="area-column">
-                                            <h4>North Austin</h4>
-                                            <a href="/locations/north-austin.html">North Austin</a>
-                                            <a href="/locations/allandale.html">Allandale</a>
-                                            <a href="/locations/brentwood.html">Brentwood</a>
-                                            <a href="/locations/north-lamar.html">North Lamar</a>
-                                            <a href="/locations/georgian-acres.html">Georgian Acres</a>
-                                            <a href="/locations/heritage-hills.html">Heritage Hills</a>
+                                            <h4>Inner Loop</h4>
+                                            <a href="../locations/river-oaks.html">River Oaks</a>
+                                            <a href="../locations/upper-kirby.html">Upper Kirby</a>
+                                            <a href="../locations/west-university.html">West University</a>
+                                            <a href="../locations/rice-military.html">Rice Military</a>
+                                            <a href="../locations/the-heights.html">The Heights</a>
                                         </div>
                                         <div class="area-column">
-                                            <h4>East Austin</h4>
-                                            <a href="/locations/windsor-park.html">Windsor Park</a>
-                                            <a href="/locations/windsor-hills.html">Windsor Hills</a>
-                                            <a href="/locations/pleasant-valley.html">Pleasant Valley</a>
-                                            <a href="/locations/montopolis.html">Montopolis</a>
-                                            <a href="/locations/riverside.html">Riverside</a>
-                                            <a href="/locations/rose-dale.html">Rosedale</a>
+                                            <h4>West Houston</h4>
+                                            <a href="../locations/memorial.html">Memorial</a>
+                                            <a href="../locations/memorial-villages.html">Memorial Villages</a>
+                                            <a href="../locations/spring-branch.html">Spring Branch</a>
+                                            <a href="../locations/energy-corridor.html">Energy Corridor</a>
+                                            <a href="../locations/briar-forest.html">Briar Forest</a>
+                                            <a href="../locations/westchase.html">Westchase</a>
                                         </div>
                                         <div class="area-column">
-                                            <h4>South Austin</h4>
-                                            <a href="/locations/south-lamar.html">South Lamar</a>
-                                            <a href="/locations/zilker.html">Zilker</a>
-                                            <a href="/locations/barton-hills.html">Barton Hills</a>
-                                            <a href="/locations/garrison-park.html">Garrison Park</a>
-                                            <a href="/locations/parker-lane.html">Parker Lane</a>
-                                            <a href="/locations/south-manchaca.html">South Manchaca</a>
-                                            <a href="/locations/south-river-city.html">South River City</a>
-                                        </div>
-                                        <div class="area-column">
-                                            <h4>West & Outskirts</h4>
-                                            <a href="/locations/west-oak-hill.html">West Oak Hill</a>
-                                            <a href="/locations/east-oak-hill.html">East Oak Hill</a>
-                                            <a href="/locations/wells-branch.html">Wells Branch</a>
-                                            <a href="/locations/st-johns.html">St. Johns</a>
-                                            <a href="/locations/franklin-park.html">Franklin Park</a>
-                                            <a href="/locations/vineland.html">Vineland</a>
-                                            <a href="/locations/sweet-briar.html">Sweet Briar</a>
+                                            <h4>Southwest Houston</h4>
+                                            <a href="../locations/alief.html">Alief</a>
+                                            <a href="../locations/mission-bend.html">Mission Bend</a>
+                                            <a href="../locations/meyerland.html">Meyerland</a>
+                                            <a href="../locations/westbury.html">Westbury</a>
+                                            <a href="../locations/bellaire.html">Bellaire</a>
+                                            <h4>Houston Suburbs</h4>
+                                            <a href="../locations/richmond.html">Richmond</a>
+                                            <a href="../locations/sugar-land.html">Sugar Land</a>
+                                            <a href="../locations/katy.html">Katy</a>
+                                            <a href="../locations/rosenberg.html">Rosenberg</a>
+                                            <a href="../locations/fulshear.html">Fulshear</a>
+                                            <a href="../locations/missouri-city.html">Missouri City</a>
+                                            <a href="../locations/pearland.html">Pearland</a>
+                                            <a href="../locations/cypress.html">Cypress</a>
                                         </div>
                                     </div>
                                 </div>
@@ -532,101 +555,7 @@
     </div>
 </section>
 
-<div class="mobile-top-bar">
-    <div class="burger-icon" onclick="toggleTopBar()">
-        ☰
-    </div>
-    <div class="mobile-contact-info" id="mobileTopBar">
-        <ul>
-            <li>
-                <a href="/index.html" class="mobile-nav-link">Home</a>
-            </li>
-
-            <li class="mobile-areas-section" onclick="toggleMobileSection(this)">
-                <div class="mobile-areas-title">Locations</div>
-                <div class="mobile-areas-list">
-                    <div class="mobile-area-group">
-                        
-                        <a href="/index.html">Austin</a>
-                        <a href="/locations/downtown.html">Downtown</a>
-                        <a href="/locations/university-of-texas.html">University of Texas</a>
-                        <a href="/locations/west-university.html">West University</a>
-                        <a href="/locations/hyde-park.html">Hyde Park</a>
-                    
-                        
-                        <a href="/locations/north-austin.html">North Austin</a>
-                        <a href="/locations/allandale.html">Allandale</a>
-                        <a href="/locations/brentwood.html">Brentwood</a>
-                        <a href="/locations/north-lamar.html">North Lamar</a>
-                        <a href="/locations/georgian-acres.html">Georgian Acres</a>
-                        <a href="/locations/heritage-hills.html">Heritage Hills</a>
-                    
-                        
-                        <a href="/locations/windsor-park.html">Windsor Park</a>
-                        <a href="/locations/windsor-hills.html">Windsor Hills</a>
-                        <a href="/locations/pleasant-valley.html">Pleasant Valley</a>
-                        <a href="/locations/montopolis.html">Montopolis</a>
-                        <a href="/locations/riverside.html">Riverside</a>
-                        <a href="/locations/rose-dale.html">Rosedale</a>
-                    
-                        
-                         <a href="/locations/south-lamar.html">South Lamar</a>
-                         <a href="/locations/zilker.html">Zilker</a>
-                         <a href="/locations/barton-hills.html">Barton Hills</a>
-                         <a href="/locations/garrison-park.html">Garrison Park</a>
-                         <a href="/locations/parker-lane.html">Parker Lane</a>
-                         <a href="/locations/south-manchaca.html">South Manchaca</a>
-                         <a href="/locations/south-river-city.html">South River City</a>
-                    
-                        
-                        <a href="/locations/west-oak-hill.html">West Oak Hill</a>
-                        <a href="/locations/east-oak-hill.html">East Oak Hill</a>
-                        <a href="/locations/wells-branch.html">Wells Branch</a>
-                        <a href="/locations/st-johns.html">St. Johns</a>
-                        <a href="/locations/franklin-park.html">Franklin Park</a>
-                        <a href="/locations/vineland.html">Vineland</a>
-                        <a href="/locations/sweet-briar.html">Sweet Briar</a>
-                    </div>
-                </div>
-            </li> <!--Зміна-->
-
-            <li class="mobile-areas-section" onclick="toggleMobileSection(this)">
-                <div class="mobile-areas-title">Services </div>
-                <div class="mobile-areas-list">
-                    <div class="mobile-area-group">
-                        <a href="/services/wallpaper-installation.html">Wallpaper Installation</a>
-                        <a href="/services/wallpaper-removal.html">Wallpaper Removal</a>
-                        <a href="/services/custom-wallpaper.html">Custom Wallpaper</a>
-                        <a href="/services/commercial-installation.html">Commercial Installation</a>
-                        <a href="/services/accent-walls.html">Accent Walls</a>
-                        <a href="/services/textured-walls.html">Textured Walls</a>
-                        <a href="/services/wall-prep.html">Wall Preparation</a>
-                        <a href="/services/murals-installation.html">Murals Installation</a>
-                        <a href="/services/grasscloth.html">Grasscloth Wallpaper</a>
-                        <a href="/services/vinyl-wallpaper.html">Vinyl Wallpaper</a>
-                        <a href="/services/fabric-wallpaper.html">Fabric Wallpaper</a>
-                        <a href="/services/border-installation.html">Border Installation</a>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <a href="/portfolio.html" class="mobile-nav-link">Portfolio</a>
-            </li>
-
-            <li>
-                <a href="/contact.html" class="mobile-nav-link">Contact</a>
-            </li>
-
-            <li>
-                <a href="tel:+12542670001" class="mobile-phone-link"> <!--Зміна-->
-                    <span class="flaticon-technology">(254) 267-0001</span>  <!--Зміна-->
-                </a>
-            </li>
-        </ul>
-    </div>
-</div> 
-    <section class="hero-static">
+<section class="hero-static">
         <img src="/images/slides/111-800.webp" srcset="
         /images/slides/111-800.webp 800w,
         /images/slides/111-1500.webp 1500w,
@@ -909,97 +838,56 @@
     </div>
 
     
-    <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-section">
-            <h3>Contact</h3>
-            <p>7119 FM 1464 Ste 160 Richmond TX 77407</p>
-            <p> (346) 352-2770</p>
-            <p>info@luxewallpapersvinyl.com</p>
+            <footer class="luxe-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Column 1: Brand & Social -->
+      <div class="footer-col footer-brand">
+        <div class="footer-logo">
+          <a href="../index.html">
+            <img src="../images/logo.png" alt="Luxe Wallpaper & Vinyl Logo">
+          </a>
         </div>
+        <p class="footer-desc">Premium wallpaper installation and wallcovering services across the Greater Houston Area. Experience luxury craftsmanship in every project.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com" aria-label="Instagram" class="social-link" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://facebook.com" aria-label="Facebook" class="social-link" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://houzz.com" aria-label="Houzz" class="social-link" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-houzz"></i>
+          </a>
+        </div>
+      </div>
 
-        <div class="footer-section">
-            <div class="footer-dropdown">
-                <h3 class="dropdown-trigger">
-                    Services
-                    <span class="arrow">▼</span>
-                </h3>
-                <div class="dropdown-content">
-                    <a href="/services/wallpaper-installation.html">Wallpaper Installation</a>
-                    <a href="/services/wallpaper-removal.html">Wallpaper Removal</a>
-                    <a href="/services/custom-wallpaper.html">Custom Wallpaper</a>
-                    <a href="/services/commercial-installation.html">Commercial Installation</a>
-                    <a href="/services/accent-walls.html">Accent Walls</a>
-                    <a href="/services/textured-walls.html">Textured Walls</a>
-                    <a href="/services/wall-prep.html">Wall Preparation</a>
-                    <a href="/services/murals-installation.html">Murals Installation</a>
-                    <a href="/services/grasscloth.html">Grasscloth Wallpaper</a>
-                    <a href="/services/vinyl-wallpaper.html">Vinyl Wallpaper</a>
-                    <a href="/services/fabric-wallpaper.html">Fabric Wallpaper</a>
-                    <a href="/services/border-installation.html">Border Installation</a>
-                </div>
-            </div>
-        </div>
+      <!-- Column 2: Services -->
+      <div class="footer-col footer-services">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="../services/wallpaper-installation.html">Residential Wallpaper</a></li>
+          <li><a href="../services/commercial-installation.html">Commercial Installation</a></li>
+          <li><a href="../services/vinyl-wallpaper.html">Vinyl Wallcoverings</a></li>
+          <li><a href="../services/fabric-wallpaper.html">Fabric Wallcoverings</a></li>
+          <li><a href="../services/wall-prep.html">Wall Prep</a></li>
+          <li><a href="../services/murals-installation.html">Custom Murals</a></li>
+        </ul>
+      </div>
 
-        <div class="footer-section">
-            <div class="footer-dropdown">
-                <h3 class="dropdown-trigger">
-                    Locations
-                    <span class="arrow">▼</span>
-                </h3>
-                <div class="dropdown-content locations-dropdown">
-                    <div class="locations-grid">
-                        <div class="location-group">
-                            <h4>Central Austin</h4>
-                    <a href="/index.html">Austin</a>
-                    <a href="/locations/downtown.html">Downtown</a>
-                    <a href="/locations/university-of-texas.html">University of Texas</a>
-                    <a href="/locations/west-university.html">West University</a>
-                    <a href="/locations/hyde-park.html">Hyde Park</a>
-                </div>  
-                <div class="location-group">
-                    <h4>North Austin</h4>
-                    <a href="/locations/north-austin.html">North Austin</a>
-                    <a href="/locations/allandale.html">Allandale</a>
-                    <a href="/locations/brentwood.html">Brentwood</a>
-                    <a href="/locations/north-lamar.html">North Lamar</a>
-                    <a href="/locations/georgian-acres.html">Georgian Acres</a>
-                    <a href="/locations/heritage-hills.html">Heritage Hills</a>
-                </div>  
-                <div class="location-group">
-                    <h4>East Austin</h4>
-                    <a href="/locations/windsor-park.html">Windsor Park</a>
-                    <a href="/locations/windsor-hills.html">Windsor Hills</a>
-                    <a href="/locations/pleasant-valley.html">Pleasant Valley</a>
-                    <a href="/locations/montopolis.html">Montopolis</a>
-                    <a href="/locations/riverside.html">Riverside</a>
-                    <a href="/locations/rose-dale.html">Rosedale</a>
-                </div>  
-                <div class="location-group">
-                    <h4>South Austin</h4>
-                    <a href="/locations/south-lamar.html">South Lamar</a>
-                    <a href="/locations/zilker.html">Zilker</a>
-                    <a href="/locations/barton-hills.html">Barton Hills</a>
-                    <a href="/locations/garrison-park.html">Garrison Park</a>
-                    <a href="/locations/parker-lane.html">Parker Lane</a>
-                    <a href="/locations/south-manchaca.html">South Manchaca</a>
-                    <a href="/locations/south-river-city.html">South River City</a>
-                </div>  
-                <div class="location-group">
-                    <h4>West & Outskirts</h4>
-                    <a href="/locations/west-oak-hill.html">West Oak Hill</a>
-                    <a href="/locations/east-oak-hill.html">East Oak Hill</a>
-                    <a href="/locations/wells-branch.html">Wells Branch</a>
-                    <a href="/locations/st-johns.html">St. Johns</a>
-                    <a href="/locations/franklin-park.html">Franklin Park</a>
-                    <a href="/locations/vineland.html">Vineland</a>
-                    <a href="/locations/sweet-briar.html">Sweet Briar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <!-- Column 3: Contact & CTA -->
+      <div class="footer-col footer-contact">
+        <h4>Contact Us</h4>
+        <p class="contact-line">
+          <a href="tel:+13463522770">(346) 352-2770</a>
+        </p>
+        <p class="contact-line">
+          Email: <a href="mailto:info@luxewallpapers.com">info@luxewallpapers.com</a>
+        </p>
+        <a href="../contact.html" class="quote-cta">Get a Quick Quote</a>
+      </div>
     </div>
+  </div>
 </footer>
 
 
@@ -1007,7 +895,7 @@
     <section class="footer-bottom-area">
 
         <div class="container text-center">
-            <p>© 2025 Luxe Wallpaper & Vinyl</p>
+            <p>© <span id="year"></span> Luxe Wallpaper & Vinyl</p>
             <!-- 29 ЗМІНА -->
 
         </div>
@@ -1057,12 +945,29 @@
 
 
 
+    <script src="../js/luxe-interactive.js"></script>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 
 <script>
     function toggleTopBar() {
         var panel = document.getElementById("mobileTopBar");
-        panel.style.display = (panel.style.display === "block") ? "none" : "block";
+        if (panel) {
+            // Toggle using a class for better reliability
+            panel.classList.toggle("open-menu");
+            // Fallback for immediate display toggle
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        }
+    } else {
+                panel.style.display = "block";
+            }
+        }
     }
 
 function toggleMobileAreas(element) {
