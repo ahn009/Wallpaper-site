@@ -410,10 +410,17 @@
 
 <body>
 <!-- Mobile Header Bar - Always Visible -->
+<<<<<<< HEAD:locations/bellaire.html
     <div class="mobile-header-bar mobile-nav-bar navbar-mobile">
         <div class="mobile-logo">
             <a href="../index.html">
                 <img src="../images/logo.png" alt="Luxe Wallpaper & Vinyl Logo" height="50px" height="50px">
+=======
+    <div class="mobile-header-bar mobile-nav-bar">
+        <div class="mobile-logo">
+            <a href="../index.html">
+                <img src="../images/logo.png" alt="Luxe Wallpaper & Vinyl Logo">
+>>>>>>> 4f18fa7e0a42e46c1a7de5b57cb4dbf483d84285:locations/riverside.html
             </a>
         </div>
         <div class="mobile-nav-toggler" onclick="toggleTopBar()">
@@ -438,7 +445,11 @@
         </nav>
     </div>
 
+<<<<<<< HEAD:locations/bellaire.html
     <section class="main-menu-wrapper top-bar-area navbar-desktop">
+=======
+    <section class="main-menu-wrapper top-bar-area">>
+>>>>>>> 4f18fa7e0a42e46c1a7de5b57cb4dbf483d84285:locations/riverside.html
     <div class="container">
         <div class="row">
             <div class="col-lg-7 col-md-7">
@@ -844,7 +855,11 @@
       <div class="footer-col footer-brand">
         <div class="footer-logo">
           <a href="../index.html">
+<<<<<<< HEAD:locations/bellaire.html
             <img src="../images/logo.png" alt="Luxe Wallpaper & Vinyl Logo" height="50px">
+=======
+            <img src="../images/logo.png" alt="Luxe Wallpaper & Vinyl Logo">
+>>>>>>> 4f18fa7e0a42e46c1a7de5b57cb4dbf483d84285:locations/riverside.html
           </a>
         </div>
         <p class="footer-desc">Premium wallpaper installation and wallcovering services across the Greater Houston Area. Experience luxury craftsmanship in every project.</p>
@@ -951,6 +966,7 @@
 </body>
 
 <script>
+<<<<<<< HEAD:locations/bellaire.html
         function toggleTopBar() {
         var panel = document.getElementById("mobileTopBar");
         if (panel) {
@@ -958,6 +974,24 @@
         }
     
     
+=======
+    function toggleTopBar() {
+        var panel = document.getElementById("mobileTopBar");
+        if (panel) {
+            // Toggle using a class for better reliability
+            panel.classList.toggle("open-menu");
+            // Fallback for immediate display toggle
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        }
+    } else {
+                panel.style.display = "block";
+            }
+        }
+>>>>>>> 4f18fa7e0a42e46c1a7de5b57cb4dbf483d84285:locations/riverside.html
     }
 
 function toggleMobileAreas(element) {

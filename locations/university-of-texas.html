@@ -22,170 +22,115 @@
     <link rel="shortcut icon" href="/images/favicon/favicon.ico">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <style>
-        .service-hero {
-            position: relative;
-            width: 100%;
-            height: 60vh;
-            overflow: hidden;
-        }
-
-        .service-hero img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .service-hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            width: 100%;
-        }
-
-        .service-title {
-            color: white;
-            font-size: 4rem;
-            font-weight: bold;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-            margin: 0;
-            padding: 20px 40px;
-            background: rgba(0, 0, 0, 0.4);
-            border-radius: 10px;
-            display: inline-block;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .service-hero {
-            position: relative;
-            width: 100%;
-            height: 60vh;
-            overflow: hidden;
-        }
-
-        .service-hero img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .service-hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            width: 100%;
-        }
-
-        .service-title {
-            color: white;
-            font-size: 3.5rem;
-            font-weight: bold;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-            margin: 0;
-            padding: 20px 40px;
-            background: rgba(0, 0, 0, 0.4);
-            border-radius: 10px;
-            display: inline-block;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .service-content {
-    padding: 40px 0;
-    background: #f8f9fa;
-}
-
-.content-section {
-    display: flex;
-    align-items: center;
+    
+     <style>
+        .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
     gap: 40px;
-    margin-bottom: 40px;
 }
 
-.content-section.reverse {
-    flex-direction: row-reverse;
+.footer-column h3 {
+    color: #e74c3c;
+    margin-bottom: 20px;
+    font-size: 18px;
 }
 
-.text-content {
-    flex: 1;
+.footer-column p,
+.footer-column a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
 }
 
-.text-content p {
-    font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-    margin: 0;
+.footer-column a:hover {
+    color: #e74c3c;
 }
 
-.image-content {
-    flex: 1;
+.footer-locations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.image-content img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
+.site-footer {
+    background: #141414;
+    color: white;
+    padding: 40px 0;
 }
 
-.steps-section {
-    margin-top: 40px;
+.footer-column h3 {
+    color: #d4ac64;
+    margin-bottom: 20px;
+    font-size: 18px;
 }
 
-.steps-section h2 {
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 40px;
+.location-group h4 {
+    color: #d4ac64;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
-.step {
+
+.mobile-footer {
+    background: #141414;
+    color: white;
+    padding: 30px 20px;
+}
+
+.footer-section {
     margin-bottom: 30px;
 }
 
-.step-number {
-    background: #d4ac64;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-right: 15px;
+.footer-section h3 {
+    color: #d4ac64;
+    margin-bottom: 15px;
+    font-size: 18px;
 }
 
-.step-content h3 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-    display: inline-block;
+.footer-section p,
+.footer-section a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
 }
 
-.step-content p {
-    color: #666;
-    line-height: 1.6;
-    margin: 0;
+.mobile-locations .location-group {
+    margin-bottom: 20px;
+}
+
+.mobile-locations .location-group h4 {
+    color: #d4ac64;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.mobile-locations .location-group a {
+    font-size: 13px;
+    margin-bottom: 4px;
 }
 
 @media (max-width: 768px) {
-    .content-section {
-        flex-direction: column;
-        gap: 20px;
+    .site-footer {
+        display: none;
     }
     
-    .image-content img {
-        height: 250px;
+    .mobile-footer {
+        display: block;
+        background: #141414;
+        color: white;
+        padding: 30px 20px;
     }
 }
 
+@media (min-width: 769px) {
+    .mobile-footer {
+        display: none;
+    }
+}
 
 .footer {
     background: #2a2a2a;
@@ -443,9 +388,8 @@
 }
     </style>
 
-
     <meta name="description"
-        content="Luxe Wallpaper & Vinyl begin by observing how each interior reflects the city’s blend of new construction, renovated older homes, eclectic design preferences, and abundant natural light, noting where walls show texture inconsistencies, settling marks, or layers of past finishes that may influence how new wallcovering will appear once installed. After these details are evaluated, the surfaces are prepared to a smooth and stable state that supports even adhesion and ensures consistent clarity in both color and pattern. The installation then proceeds with a calm and precise rhythm that allows each panel to settle naturally, creating clean edges, soft transitions, and a unified visual flow that suits the creative and contemporary character of Richmond interiors. The completed work feels cohesive, durable, and thoughtfully integrated into the home, and the entire process is handled quietly so daily routines continue uninterrupted and the space remains fully functional throughout the project.">
+        content="University of Texas Luxe Wallpaper & Vinyl provide precise, steady wallpaper work that smooths surfaces, enhances pattern clarity, and brings a clean, modern finish to student housing and campus area homes.">
     <!-- 2 ЗМІНА -->
     <script type="application/ld+json">
         {
@@ -465,17 +409,10 @@
 
 <body>
 <!-- Mobile Header Bar - Always Visible -->
-<<<<<<< HEAD
-    <div class="mobile-header-bar mobile-nav-bar navbar-mobile">
-        <div class="mobile-logo">
-            <a href="../index.html">
-                <img src="../images/logo.png" alt="Luxe Wallpaper & Vinyl Logo" height="50px" height="50px">
-=======
     <div class="mobile-header-bar mobile-nav-bar">
         <div class="mobile-logo">
             <a href="../index.html">
                 <img src="../images/logo.png" alt="Luxe Wallpaper & Vinyl Logo">
->>>>>>> 4f18fa7e0a42e46c1a7de5b57cb4dbf483d84285
             </a>
         </div>
         <div class="mobile-nav-toggler" onclick="toggleTopBar()">
@@ -500,30 +437,14 @@
         </nav>
     </div>
 
-<<<<<<< HEAD
-    <section class="main-menu-wrapper top-bar-area navbar-desktop">
-=======
     <section class="main-menu-wrapper top-bar-area">>
->>>>>>> 4f18fa7e0a42e46c1a7de5b57cb4dbf483d84285
     <div class="container">
         <div class="row">
             <div class="col-lg-7 col-md-7">
                 <div class="contact-info-left clearfix">
                     <ul>
-
-                        <li>
-                            <div class="logo">
-                                <a href="../index.html">
-<<<<<<< HEAD
-                                    <img src="../images/logo.png" alt="Luxe Wallpaper & Vinyl Logo" height="50px">
-=======
-                                    <img src="../images/logo.png" alt="Luxe Wallpaper & Vinyl Logo">
->>>>>>> 4f18fa7e0a42e46c1a7de5b57cb4dbf483d84285
-                            </div>
-                        </li>
                         <li>
                             <a href="/index.html" class="nav-link">Home</a>
-                                </a>
                         </li>
 
                         <li class="areas-trigger-item">
@@ -586,35 +507,23 @@
                                     <div class="dropdown-grid">
                                         <div class="area-column">
                                             <a href="/services/wallpaper-installation.html">Wallpaper Installation</a>
-                                </a>
                                             <a href="/services/wallpaper-removal.html">Wallpaper Removal</a>
-                                </a>
                                             <a href="/services/custom-wallpaper.html">Custom Wallpaper</a>
-                                </a>
                                         </div>
                                         <div class="area-column">
                                             <a href="/services/commercial-installation.html">Commercial Installation</a>
-                                </a>
                                             <a href="/services/accent-walls.html">Accent Walls</a>
-                                </a>
                                             <a href="/services/textured-walls.html">Textured Walls</a>
-                                </a>
                                         </div>
                                         <div class="area-column">
                                             <a href="/services/wall-prep.html">Wall Preparation</a>
-                                </a>
                                             <a href="/services/murals-installation.html">Murals Installation</a>
-                                </a>
                                             <a href="/services/grasscloth.html">Grasscloth Wallpaper</a>
-                                </a>
                                         </div>
                                         <div class="area-column">
                                             <a href="/services/vinyl-wallpaper.html">Vinyl Wallpaper</a>
-                                </a>
                                             <a href="/services/fabric-wallpaper.html">Fabric Wallpaper</a>
-                                </a>
                                             <a href="/services/border-installation.html">Border Installation</a>
-                                </a>
                                         </div>
                                     </div>
                                 </div>
@@ -623,19 +532,16 @@
 
                         <li>
                             <a href="/portfolio.html" class="nav-link">Portfolio</a>
-                                </a>
                         </li>
 
                         <li>
                             <a href="/contact.html" class="nav-link">Contact</a>
-                                </a>
                         </li>
 
                         <li>
                             <a href="tel:+12542670001" class="phone-link"> <!--Зміна-->
-                                <span class="flaticon-technology"> (346) 352-2770</span> <!--Зміна-->
+                                <span class="flaticon-technology">(254) 267-0001</span> <!--Зміна-->
                             </a> 
-                                </a>
                         </li>
                     </ul>
                 </div>
@@ -643,54 +549,250 @@
             <div class="col-lg-5 col-md-5">
                 <div class="top-bar-btn-container">
                     <a href="#quote" class="top-bar-quote-btn">Get Free Quote</a>
-                                </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="service-hero">
+<section class="hero-static">
         <img src="/images/slides/111-800.webp" srcset="
         /images/slides/111-800.webp 800w,
         /images/slides/111-1500.webp 1500w,
         /images/slides/111-3000.webp 3000w" sizes="(max-width: 768px) 800px, (max-width: 1920px) 1500px, 3000px"
-            width="3000" height="1582" alt="Luxe Wallpaper & Vinyl" loading="eager" decoding="async" />
-        <div class="service-hero-content">
-            <h1 class="service-title">Vinyl Wallpaper</h1>
+            width="3000" height="1582" alt="University of Texas Wallpaper Installations" loading="eager" decoding="async" />
+        <div class="hero-content">
+            <div class="slide-content-box">
+                <h1>
+                    University of Texas Wallpaper Installations<br /> <!-- 10 ЗМІНА -->
+                    <span>Residential</span> & <span>Commercial</span>
+                </h1>
+                <h3>
+                    Why Over <span>1000</span> University of Texas Residents Have Chosen Us for Their Wallpaper Projects
+                </h3> <!-- 11 ЗМІНА -->
+                <br>
+                <p class="description-text">
+                    Our commitment to excellence has made us the go-to choice for wallpaper installation in University of Texas.
+                    We handle projects of all sizes and complexities, using only premium materials and proven techniques
+                    to ensure lasting beauty and customer satisfaction.
+                </p> <!-- 12 ЗМІНА -->
+            </div>
+            <div class="button-row">
+                <a class="thm-btn bg-cl-1" href="tel:+12542670001">Call Now</a> <!-- 13 ЗМІНА -->
+                <a class="thm-btn bg-cl-1" href="#quote" id="getQuoteBtn">Get Free Quote</a>
+            </div>
+        </div>
+    </section>
+    <!--End rev slider wrapper-->
+
+    <!--Start welcome area-->
+    <section class="welcome-area">
+        <div class="container clearfix">
+            <div class="sec-title">
+                <h2>Welcome to <span>University of Texas Wallpaper Installations</span></h2> <!-- 14 ЗМІНА -->
+                <span class="decor"></span>
+            </div>
+            <div class="row">
+
+                <div class="col-md-7 col-sm-12 col-xs-12">
+                    <div class="text-holder">
+                        <h3>We are your trusted wallpaper installers with over 15 years of experience.</h3>
+                        <p>University of Texas Luxe Wallpaper & Vinyl begin by observing how each interior reflects the fast paced mix of student apartments, renovated dorm rooms, faculty housing, and small shared spaces, noting where walls show texture inconsistencies, high traffic wear, or older finish layers that may influence how new wallcovering will appear once installed. After reviewing these conditions, the surfaces are prepared to a smooth and dependable state that supports even adhesion and ensures clear and consistent presentation of color and pattern. The installation then continues with a calm and controlled rhythm that allows each panel to settle naturally, creating neat seams, soft transitions, and a unified visual movement that suits the functional, modern, and academically focused environment surrounding the University of Texas. The finished result feels cohesive, durable, and thoughtfully integrated into the space, and the entire process is carried out quietly so daily routines, study schedules, and shared living remain completely undisturbed.</p> <!-- 15 ЗМІНА -->
+                    </div>
+
+                    <div class="features-cards">
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-5 col-sm-12 col-xs-12">
+                    <div class="worker-image">
+                        <img src="/images/areas/university-of-texas.jpg" alt="university-of-texas" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End welcome area-->
+
+    <!--Start service area-->
+    <section class="service-area" style="background-image:url(/images/services/bg.webp);">
+        <div class="container">
+            <div class="sec-title" id="services">
+                <h2>Services We do</h2>
+                <span class="decor"></span>
+            </div>
+            <div class="row">
+                <!--Start single service item-->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="single-service-item">
+                        <div class="img-holder">
+                            <img src="/images/services/non-woven.webp" alt="Non Woven Wallpaper">
+                        </div>
+                        <div class="text-holder">
+                            <h3>Non Woven <span>Wallpaper Installation</span></h3>
+                            <p>Refresh your space with expert non-woven wallpaper installation and clean
+                                results.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End single service item-->
+                <!--Start single service item-->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="single-service-item">
+                        <div class="img-holder">
+                            <img src="/images/services/vinyl.webp" alt="Vinyl Wallpaper">
+                        </div>
+                        <div class="text-holder">
+                            <h3>Vinyl <span>Wallpaper Installation</span></h3>
+                            <p>Durable and stylish vinyl wallpaper installation that elevates your space.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End single service item-->
+                <!--Start single service item-->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="single-service-item">
+                        <div class="img-holder">
+                            <img src="/images/services/prepasted.webp" alt="Prepasted Wallpaper">
+                        </div>
+                        <div class="text-holder">
+                            <h3>Prepasted <span>Wallpaper Installation</span></h3>
+                            <p>Quick and clean prepasted wallpaper installation for a hassle-free upgrade.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End single service item-->
+                <!--Start single service item-->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="single-service-item">
+                        <div class="img-holder">
+                            <img src="/images/services/paper.webp" alt="Paper Wallpaper">
+                        </div>
+                        <div class="text-holder">
+                            <h3>Paper <span>Wallpaper Installation</span></h3>
+                            <p>Classic paper wallpaper installation with clean lines and expert care.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End single service item-->
+                <!--Start single service item-->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="single-service-item">
+                        <div class="img-holder">
+                            <img src="/images/services/mural.webp" alt="Mural Wallpaper">
+                        </div>
+                        <div class="text-holder">
+                            <h3>Mural <span>Wallpaper Installation</span></h3>
+                            <p>Transform your walls with stunning mural wallpaper installation.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End single service item-->
+                <!--Start single service item-->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="single-service-item">
+                        <div class="img-holder">
+                            <img src="/images/services/peel-and-stick.webp" alt="Peel and Stick Wallpaper">
+                        </div>
+                        <div class="text-holder">
+                            <h3>Peel and Stick <span>Wallpaper Installation</span></h3>
+                            <p>Easy-up, easy-off peel and stick wallpaper installed to perfection.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End single service item-->
+
+                <!--Start commercial grade-->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="single-service-item">
+                        <div class="img-holder">
+                            <img src="/images/services/commercial.webp" alt="Commercial Grade Wallpaper">
+                        </div>
+                        <div class="text-holder">
+                            <h3>Commercial Grade <span>Wallpaper Installation</span></h3>
+                            <p>High-performance commercial grade wallpaper installation for offices,
+                                hotels, and retail spaces.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End commercial grade-->
+                <!--Start grasscloth-->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="single-service-item">
+                        <div class="img-holder">
+                            <img src="/images/services/grasscloth.webp" alt="Grasscloth Wallpaper">
+                        </div>
+                        <div class="text-holder">
+                            <h3>Grasscloth <span>Wallpaper Installation</span></h3>
+                            <p>Bring natural texture and warmth with expert grasscloth wallpaper installation.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End grasscloth-->
+                <!--Start fabric-->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="single-service-item">
+                        <div class="img-holder">
+                            <img src="/images/services/fabric.webp" alt="Fabric Wallpaper">
+                        </div>
+                        <div class="text-holder">
+                            <h3>Fabric <span>Wallpaper Installation</span></h3>
+                            <p>Luxurious fabric wallpaper installation for a soft, elegant wall finish.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End fabric-->
+
+            </div>
         </div>
     </section>
 
+    <!--End service area-->
 
-<section class="service-content">
-    <div class="container">
-        <div class="content-section">
-            <div class="image-content">
-                <img src="/images/services2/vinyl-wallpaper1.jpg" alt="Vinyl Wallpaper Installation Services">
-            </div>
-            <div class="text-content">
-                <p>Vinyl wallpaper installation provides durable, practical, and stylish solutions for high-traffic areas and moisture-prone spaces. Our experienced team specializes in working with various vinyl wallpapers including standard vinyl, fabric-backed vinyl, and washable vinyl options that combine aesthetic appeal with exceptional durability. These versatile wall coverings resist moisture, stains, and daily wear while maintaining their vibrant colors and patterns for years of beautiful performance.</p>
-                <br>
-                <p>We install a wide range of vinyl wallpaper types suitable for different environments, from kitchens and bathrooms to commercial spaces and children's rooms. Our vinyl wallpaper services include proper surface preparation, precise pattern matching, and expert installation techniques that ensure bubble-free results and long-lasting adhesion. Whether you need scrubbable surfaces for easy maintenance or heavy-duty protection for busy areas, we deliver vinyl installations that balance beauty with practical functionality.</p>
+
+    <section class="faq-section">
+    <div class="faq-accordion">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+
+        <div class="accordion-item">
+            <div class="accordion-header">How to remove wallpaper?</div>
+            <div class="accordion-content">
+                <p>Wallpaper removal involves scoring the surface, applying steam or removal solution, and scraping carefully. Many homeowners prefer professional removal services to avoid wall damage. Proper removal is crucial for preparing walls for new wallpaper or paint.</p>
             </div>
         </div>
 
-        <div class="steps-section">
-            <h2>Vinyl Wallpaper Solutions</h2>
-            
-            <div class="content-section reverse">
-                <div class="image-content">
-                    <img src="/images/services2/vinyl-wallpaper2.jpg" alt="Durable Wallpaper Application">
-                </div>
-                <div class="text-content">
-                    <p>Our vinyl wallpaper installation begins with assessing your space's specific requirements including moisture levels, traffic patterns, and maintenance needs. We consider factors such as humidity exposure, cleaning frequency, and durability expectations to recommend the most suitable vinyl wallpaper type for your project. This careful evaluation ensures the selected vinyl material performs optimally in your specific environment while meeting your aesthetic preferences.</p>
-                    <br>
-                    <p>The installation of vinyl wallpaper requires specific techniques to ensure proper adhesion and prevent issues like bubbling or seam separation. Our skilled installers use appropriate adhesives and application methods designed for vinyl materials, ensuring smooth, wrinkle-free installations with perfect pattern alignment. We pay special attention to seam treatment and edge sealing in moisture-prone areas, creating durable installations that withstand environmental challenges while maintaining their visual appeal.</p>
-                </div>
+        <div class="accordion-item">
+            <div class="accordion-header">What is peel and stick wallpaper?</div>
+            <div class="accordion-content">
+                <p>Peel and stick wallpaper is self-adhesive backing that doesn't require paste. It's popular for rental properties and DIY projects. This removable wallpaper is ideal for temporary decor changes and can be easily installed without professional help.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header">Where to buy wallpaper?</div>
+            <div class="accordion-content">
+                <p>Wallpaper can be purchased at home improvement stores, specialty wallpaper shops, and online retailers. Many local suppliers offer professional consultation and installation services to help you choose the perfect wallpaper for your project.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header">How to prepare walls for wallpaper?</div>
+            <div class="accordion-content">
+                <p>Wall preparation involves cleaning, repairing cracks, and applying primer. Proper preparation ensures wallpaper adhesion and long-lasting results. Smooth, dry walls are essential for successful wallpaper installation in any home.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header">What is the best wallpaper for bathrooms?</div>
+            <div class="accordion-content">
+                <p>For bathrooms, moisture-resistant vinyl wallpaper is recommended. It withstands humidity and is easy to clean. Many homeowners choose waterproof options specifically designed for high-moisture areas like bathrooms.</p>
             </div>
         </div>
     </div>
 </section>
+
+
     <!-- Стики-кнопка -->
     <button class="sticky-btn" id="stickyBtn">
         <i class="fas fa-phone-alt"></i> Get Free Quote
@@ -733,18 +835,15 @@
         </div>
     </div>
 
-        <footer class="luxe-footer" role="contentinfo">
+    
+            <footer class="luxe-footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <!-- Column 1: Brand & Social -->
       <div class="footer-col footer-brand">
         <div class="footer-logo">
           <a href="../index.html">
-<<<<<<< HEAD
-            <img src="../images/logo.png" alt="Luxe Wallpaper & Vinyl Logo" height="50px">
-=======
             <img src="../images/logo.png" alt="Luxe Wallpaper & Vinyl Logo">
->>>>>>> 4f18fa7e0a42e46c1a7de5b57cb4dbf483d84285
           </a>
         </div>
         <p class="footer-desc">Premium wallpaper installation and wallcovering services across the Greater Houston Area. Experience luxury craftsmanship in every project.</p>
@@ -790,54 +889,54 @@
 </footer>
 
 
-        <section class="footer-bottom-area">
 
-            <div class="container text-center">
-                <p>© <span id="year"></span> Luxe Wallpaper & Vinyl</p>
-                <!-- 29 ЗМІНА -->
+    <section class="footer-bottom-area">
 
-            </div>
-        </section>
-        <!--End footer bottom area-->
+        <div class="container text-center">
+            <p>© <span id="year"></span> Luxe Wallpaper & Vinyl</p>
+            <!-- 29 ЗМІНА -->
 
-        <!--Scroll to top-->
-        <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+        </div>
+    </section>
+    <!--End footer bottom area-->
 
-        <!-- main jQuery -->
-        <script src="/js/jquery-1.11.1.min.js"></script>
-        <!-- bootstrap -->
-        <script src="/js/bootstrap.min.js"></script>
-        <!-- bx slider -->
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
 
-        <!-- count to -->
+    <!-- main jQuery -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- bx slider -->
 
-
-        <!-- validate -->
-        <!-- mixit up -->
-        <!-- easing -->
-        <!-- gmap helper -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHzPSV2jshbjI8fqnC_C4L08ffnj5EN3A"></script>
-        <!--gmap script-->
-
-        <!-- jQuery ui js -->
-        <script src="/assets/jquery-ui-1.11.4/jquery-ui.js"></script>
-        <script src="/js/form-validation.js"></script>
-        <script src="/js/portfolio.js"></script>
-        <script src="/js/faq.js"></script>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script src="/js/slider.js"></script>
-        <script src="/js/sticky-button.js"></script>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        <!-- revolution slider js -->
+    <!-- count to -->
 
 
+    <!-- validate -->
+    <!-- mixit up -->
+    <!-- easing -->
+    <!-- gmap helper -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHzPSV2jshbjI8fqnC_C4L08ffnj5EN3A"></script>
+    <!--gmap script-->
+
+    <!-- jQuery ui js -->
+    <script src="assets/jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script src="/js/form-validation.js"></script>
+    <script src="/js/faq.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/slider.js"></script>
+    <script src="/js/sticky-button.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- revolution slider js -->
 
 
 
 
 
-        <!-- thm custom script -->
-        <script src="/js/custom.js"></script>
+
+
+    <!-- thm custom script -->
+    <script src="/js/custom.js"></script>
 
 
 
@@ -851,15 +950,6 @@
 </body>
 
 <script>
-<<<<<<< HEAD
-        function toggleTopBar() {
-        var panel = document.getElementById("mobileTopBar");
-        if (panel) {
-            panel.classList.toggle("active");
-        }
-    
-    
-=======
     function toggleTopBar() {
         var panel = document.getElementById("mobileTopBar");
         if (panel) {
@@ -876,24 +966,23 @@
                 panel.style.display = "block";
             }
         }
->>>>>>> 4f18fa7e0a42e46c1a7de5b57cb4dbf483d84285
     }
 
-    function toggleMobileAreas(element) {
-        element.classList.toggle('active');
-    }
+function toggleMobileAreas(element) {
+    element.classList.toggle('active');
+}
 
-    document.addEventListener('click', function (e) {
-        if (!e.target.closest('.mobile-areas-item')) {
-            document.querySelectorAll('.mobile-areas-trigger').forEach(function (trigger) {
-                trigger.classList.remove('active');
-            });
-        }
-    });
-
-    function toggleMobileSection(section) {
-        section.classList.toggle('active');
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.mobile-areas-item')) {
+        document.querySelectorAll('.mobile-areas-trigger').forEach(function(trigger) {
+            trigger.classList.remove('active');
+        });
     }
+});
+
+function toggleMobileSection(section) {
+    section.classList.toggle('active');
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
