@@ -75,10 +75,27 @@
 
 
 /*==============================================
+   CSS Root Variables
+===============================================*/
+:root {
+    /* Luxe Antique Brass Aesthetic */
+    --accent: #B8924E;          /* Antique Brass - High contrast for white backgrounds */
+    --accent-gold: #D4AF37;     /* Brilliant Gold - For dark backgrounds and highlights */
+    --accent-hover: #96733a;    /* Deeper gold for interaction */
+    --nav-bg: #0A0A0A;          /* Obsidian Black */
+    --text-on-accent: #000000;  /* MANDATORY: ALWAYS use black text on gold backgrounds */
+    --text-secondary: #a1a1a1;
+}
+
+/*==============================================
    Base Css
 ===============================================*/
 html,
-body { height: 100% }
+body { 
+  height: 100%;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -86,19 +103,31 @@ body {
   line-height: 28px;
   font-weight: 300;
   overflow-x: hidden;
+  padding-top: 70px;
 }
-button:focus{
+
+button {
+  font-family: inherit;
+}
+
+button:focus {
   outline: none;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
   margin: 0;
 }
 h3 {
- 
+  font-weight: inherit;
 }
-h4 {
 
+h4 {
+  font-weight: inherit;
 }
 a,
 a:hover,
@@ -107,6 +136,12 @@ a:focus {
   text-decoration: none;
   outline: none;
   border: none;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 img {
 	max-width: 100%;
@@ -133,23 +168,33 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 
 .thm-btn {
-  color: #fff;
+  color: #000000 !important;
   font-size: 14px;
   font-weight: 700;
   display: inline-block;
-  border: 2px solid #d5ac63;
+  background-color: var(--accent);
+  border: 2px solid var(--accent);
   text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
-  transition: all 500ms ease;
+  font-family: inherit;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
   line-height: 14px;
 }
-.bg-cl-1{
-  background: #d5ac63;  
+
+.thm-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
+
+.bg-cl-1{
+  background: var(--accent);  
+}
+
 .thm-btn:hover{
-  background: #141414;  
-  border: 2px solid #d5ac63;
-  color: #fff;
+  background: #FFFFFF;
+  border: 2px solid var(--accent);
+  color: #000000 !important;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 }
 
 
@@ -168,10 +213,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   margin: 0;
 }
 .sec-title h2 span{
-  color: #d5ac63;
+  color: var(--accent);
 }
 .sec-title span.decor {
-  background: #d5ac63 none repeat scroll 0 0;
+  background: var(--accent) none repeat scroll 0 0;
   height: 2px;
   width: 78px;
   display: inline-block;
@@ -184,7 +229,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   left: 0;
   width: 8px;
   height: 8px;
-  background: #d5ac63;
+  background: var(--accent);
   border-radius: 50%;
   content: "";
 }
@@ -266,8 +311,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 /* scroll to top styles */
 .scroll-to-top {
-  background: #d5ac63;
-  border: 2px solid #d5ac63;
+  background: var(--accent);
+  border: 2px solid var(--accent);
   border-radius: 5%;
   bottom: 25px;
   color: #fff;
@@ -280,15 +325,21 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   position: fixed;
   right: 15px;
   text-align: center;
-  transition: all 500ms ease 0s;
+  transition: background-color 0.5s ease, border-color 0.5s ease;
   width: 45px;
   z-index: 99999;
   -webkit-box-shadow: 0px 8px 23px -6px rgba(27,27,27,1);
   -moz-box-shadow: 0px 8px 23px -6px rgba(27,27,27,1);
   box-shadow: 0px 8px 23px -6px rgba(27,27,27,1);
 }
+
+.scroll-to-top:focus-visible {
+  outline: 2px solid var(--accent-hover);
+  outline-offset: 2px;
+}
+
 .scroll-to-top:hover {
-  border: 2px solid #d6a041;
+  border: 2px solid var(--accent-hover);
   color: #fff;
   background: #1b1b1b;
 }
@@ -315,8 +366,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   color: #fff;	
   opacity: 0;
   filter: alpha(opacity=0);
-  -webkit-transition: all 450ms ease-out 0s;
-  transition: all 450ms ease-out 0s;
+  -webkit-transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
   -webkit-transform: rotateY(180deg) scale(0.5,0.5);
   transform: rotateY(180deg) scale(0.5,0.5);    
 }
@@ -342,14 +393,14 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     left: 0;
     width: 100%;
     z-index: 10000;
-    background-color: #111; /* или нужный цвет */
+    background-color: var(--nav-bg);
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(184, 146, 78, 0.2);
 }
 
 .top-bar-area .contact-info-left ul li {
   display: inline-block;
-  float: left;
   margin-right: 30px;
   font-size: 14px;
   color: #fff;
@@ -358,7 +409,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   margin-right:0;
 }
 .top-bar-area .contact-info-left ul li span:before{
-  color: #d5ac63;
+  color: var(--accent);
   padding-right: 6px;
 }
 .top-bar-area .contact-info-left ul li span.envelop:before {
@@ -382,7 +433,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   margin: 0;
 }
 .top-bar-area .contact-info-right .phnumber span::before {
-  color: #d5ac63;
+  color: var(--accent);
   display: inline-block;
   padding-right: 6px;
   position: relative;
@@ -410,7 +461,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   color: #fff;
   font-size: 14px;
   font-weight: 400;
-  transition: all 500ms ease 0s;
+  transition: color 0.3s ease;
   width: 20px;
   height: 20px;
   display: block;
@@ -418,7 +469,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   line-height: 20px;
 }
 .top-social-links ul li a:hover i{
-  color: #d5ac63;
+  color: var(--accent);
 }
 
 
@@ -429,16 +480,18 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     Header Area Css
 ===============================================*/
 .header-area {
-
+  position: relative;
 }
+
 .header-area .outer-box {
   padding-right: 120px;
   position: relative;
 }
+
 .header-area .outer-box .logo {
   float: left;
   position: relative;
-  transition: all 500ms ease 0s;
+  transition: opacity 0.3s ease;
   padding: 40px 0;
 }
 
@@ -506,7 +559,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   top: 10px;
 }
 .welcome-area .text-holder .bottom .title h3 span{
-  color: #d5ac63;
+  color: var(--accent);
   font-family: "OilBats";
   line-height: 30px;
   margin-top: 5px;
@@ -559,8 +612,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .single-service-item .img-holder img{
   -webkit-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  -webkit-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
   width: 100%;    
 }
 .single-service-item .img-holder .overlay .box .content a i{
@@ -571,7 +624,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   font-size: 20px;
   height: 45px;
   line-height: 48px;
-  transition: all 500ms ease 0s;
+  transition: background-color 0.5s ease;
   width: 45px; 
 }
 .single-service-item:hover .img-holder .overlay{
@@ -585,11 +638,11 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   transform: scale(1.1);
 }
 .single-service-item .img-holder .overlay .box .content a:hover i{
-  background: #d5ac63;
+  background: var(--accent);
 }
 
 .single-service-item .text-holder h3 {
-  color: #d5ac63;
+  color: var(--accent);
   font-size: 20px;
   font-weight: 500;
   line-height: 28px;
@@ -629,7 +682,6 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 .latest-project-area .project-filter li {
   display: inline-block;
-  float: left;
   margin: 0;
 }
 
@@ -640,7 +692,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   font-size: 16px;
   font-weight: 400;
   text-transform: capitalize;
-  transition: all 500ms ease 0s;
+  transition: color 0.5s ease;
   font-family: 'Roboto', sans-serif;
 }
 .latest-project-area .project-filter li:last-child span:after{
@@ -654,7 +706,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 .latest-project-area .project-filter li.active span, 
 .latest-project-area .project-filter li:hover span {
-  color: #d5ac63;
+  color: var(--accent);
 }
 
 .single-project-item {
@@ -668,8 +720,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .single-project-item .img-holder img {
   -webkit-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  -webkit-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
   width: 100%;      
 }
 
@@ -680,11 +732,11 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   font-weight: 500;
   text-transform: capitalize;
   margin: 0 0 3px;
-  transition: all 500ms ease;
+  transition: color 0.5s ease;
 }
 .single-project-item .img-holder .overlay .box .content p {
   font-weight: 400;
-  color: #d5ac63;
+  color: var(--accent);
   margin: 0;
 }
 .single-project-item:hover .img-holder .overlay {
@@ -698,7 +750,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   transform: scale(1.1);
 }
 .single-project-item .img-holder .overlay .box .content a h3:hover{
-  color: #d5ac63;
+  color: var(--accent);
 }
 
 .latest-project-area .single-project-item .img-holder .overlay .box .content .icon-holder {
@@ -708,7 +760,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   position: absolute;
   right: 15px;
   top: 15px;
-  transition: all 500ms ease 0s;
+  transition: background-color 0.5s ease;
   width: 40px;
 }
 .latest-project-area .single-project-item .img-holder .overlay .box .content .icon-holder a i {
@@ -716,10 +768,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   display: inline-block;
   font-size: 14px;
   line-height: 40px;
-  transition: all 500ms ease;
+  transition: color 0.5s ease;
 }
 .latest-project-area .single-project-item .img-holder .overlay .box .content .icon-holder:hover{
-  background: #d5ac63;    
+  background: var(--accent);    
 } 
 
 
@@ -753,17 +805,17 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   padding: 0 140px;
 }
 .slogan-area .slogan h2{
-  color: #d5ac63;
+  color: var(--accent);
   font-size: 28px;
   font-weight: 400;
   line-height: 44px;
   text-align: center;
   transform: scale(1);
-  transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;   
+  transition: color 0.5s ease, transform 0.5s ease;
+  -moz-transition: color 0.5s ease, transform 0.5s ease;
+  -webkit-transition: color 0.5s ease, transform 0.5s ease;
+  -ms-transition: color 0.5s ease, transform 0.5s ease;
+  -o-transition: color 0.5s ease, transform 0.5s ease;   
 }
 .slogan-area .slogan:hover h2{
   color: #fff;
@@ -801,7 +853,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   position: relative;
   width: 180px;
   margin: 0 auto;
-  transition: all 500ms ease;
+  transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 
 .working-area .single-working-item .icon-box .icon {
@@ -812,9 +864,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   width: 160px;
   text-align: center;
   line-height: 160px;
-  color: #d5ac63;
+  color: var(--accent);
   font-size: 50px;
-  transition: all 500ms ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 .working-area .single-working-item .icon-box .icon span:before{
   font-size: 50px;
@@ -830,16 +882,18 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   text-align: center;
   top: 10px;
   width: 45px;
-  transition: all 500ms ease;
+  transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 .working-area .single-working-item .icon-box .count h3 {
   color: #252525;
   font-size: 18px;
   line-height: 45px;
   font-weight: 700;
-  transition: all 500ms ease;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
 }
-.working-area .single-working-item .text-box { }
+.working-area .single-working-item .text-box {
+  padding: 0;
+}
 .working-area .single-working-item .text-box h3 {
   color: #252525;
   font-size: 20px;
@@ -851,10 +905,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   margin: 0;  
 }
 .working-area .single-working-item:hover .icon-box{
-  background: #d5ac63;
+  background: var(--accent);
 } 
 .working-area .single-working-item:hover .icon-box .count{
-  background: #d5ac63;
+  background: var(--accent);
 }
 .working-area .single-working-item:hover .icon-box .count h3{
   color: #fff;
@@ -908,7 +962,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   margin: 0;
 }
 .single-footer-widget .interrio-info p span{
-  color: #d5ac63;
+  color: var(--accent);
   font-weight: 700;
 }
 .single-footer-widget .footer-contact-info {
@@ -932,14 +986,16 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   left: 0;
 }
 .single-footer-widget .footer-contact-info li .icon-holder span:before{
-  color: #d5ac63;
+  color: var(--accent);
   font-size: 20px;
 }
 .single-footer-widget .footer-contact-info li .icon-holder.time span::before {
   top: 3px;
   position: relative;
 }
-.single-footer-widget .footer-contact-info li .text-holder {}
+.single-footer-widget .footer-contact-info li .text-holder {
+  margin: 0;
+}
 .single-footer-widget .footer-contact-info li .text-holder p {
   margin: 0;
   color: #c1c1c1;
@@ -955,7 +1011,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   font-weight: 500;
   text-transform: capitalize;
 }
-.single-footer-widget .popular-news { }
+.single-footer-widget .popular-news { 
+  margin: 0;
+}
 .single-footer-widget .popular-news .single-popular-news-item {
   padding-left: 105px;
   position: relative;
@@ -975,8 +1033,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .single-footer-widget .popular-news .single-popular-news-item .img-holder img{
   -webkit-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
   width: 100%;       
 }
 .single-footer-widget .popular-news .single-popular-news-item .img-holder .overlay .box .content a i {
@@ -995,7 +1053,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   transform: scale(1.1);
 }
 .single-footer-widget .popular-news .single-popular-news-item .img-holder .overlay .box .content a:hover i{
-  color: #d5ac63;
+  color: var(--accent);
 }
 .single-footer-widget .popular-news .single-popular-news-item .text-holder {
   position: relative;
@@ -1004,20 +1062,19 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .single-footer-widget .popular-news .single-popular-news-item .text-holder p {
   color: #c1c1c1;
   margin: 0 0 10px;
- transition: all 500ms ease;
+ transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
 }
 .single-footer-widget .popular-news .single-popular-news-item .text-holder .info {
   overflow: hidden;
 }
 .single-footer-widget .popular-news .single-popular-news-item .text-holder .info li {
-  border-right: 1px solid #d5ac63;
+  border-right: 1px solid var(--accent);
   display: inline-block;
-  float: left;
   line-height: 15px;
   margin-right: 10px;
   padding-right: 10px;
-  color: #d5ac63;
-  transition: all 500ms ease;
+  color: var(--accent);
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
 }
 .single-footer-widget .popular-news .single-popular-news-item .text-holder .info li:last-child{
   border-right: none;
@@ -1025,7 +1082,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   padding-right: 0;
 }
 .single-footer-widget .popular-news .single-popular-news-item .text-holder a:hover p{
-  color: #d5ac63;
+  color: var(--accent);
 }
 
 
@@ -1060,7 +1117,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .single-footer-widget .subscribe-form form button {
     background: #1e1e1e none repeat scroll 0 0;
     border-left: 2px solid #242424;
-    color: #d5ac63;
+    color: var(--accent);
     display: block;
     height: 50px;
     padding: 10.5px 0;
@@ -1076,15 +1133,15 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     border-bottom: 1px solid #242424;
 }
 .single-footer-widget .subscribe-form form input[type=text]:focus {
-    border: 1px solid #d5ac63;
+    border: 1px solid var(--accent);
     background: #c1c1c1;
     color: #1b1b1b;
 }
 .single-footer-widget .subscribe-form form input[type=text]:focus + button, 
 .single-footer-widget .subscribe-form form button:hover {
-    background: #d5ac63 none repeat scroll 0 0;
+    background: var(--accent) none repeat scroll 0 0;
     color: #1b1b1b;
-    border-color: #d5ac63;
+    border-color: var(--accent);
 }
 
 
@@ -1098,14 +1155,15 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   margin: 12px 0 10px;
 }
 
-.single-footer-widget .latest-project {}
+.single-footer-widget .latest-project {
+  padding: 0;
+}
 .single-footer-widget .latest-project .latest-project-items {
   overflow: hidden;
   margin-top: -5px;
 }
 .single-footer-widget .latest-project ul li {
   display: inline-block;
-  float: left;
   position: relative;
 }
 .single-footer-widget .latest-project ul li .img-holder {
@@ -1115,8 +1173,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .single-footer-widget .latest-project ul li .img-holder img {
   -webkit-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
   width: 100%;     
 }
 .single-footer-widget .latest-project ul li .img-holder .overlay .box .content a i {
@@ -1135,7 +1193,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   transform: scale(1.1);  
 }
 .single-footer-widget .latest-project ul li .img-holder .overlay .box .content a:hover i {
-  color: #d5ac63;    
+  color: var(--accent);    
 }
 
 /*** 
@@ -1156,12 +1214,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     font-family: 'Lato', sans-serif;
 }
 .footer-bottom-area .copyright-text p a {
-    color: #d5ac63;
-    transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -webkit-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
+    color: var(--accent);
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
+    -moz-transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
+    -webkit-transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
+    -ms-transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
+    -o-transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
 }
 .footer-bottom-area .copyright-text p a:hover{
   color: #fff;
@@ -1179,10 +1237,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .footer-bottom-area .footer-menu ul li a i{
   color: #ffffff;
   font-size: 16px;
-  transition: all 500ms ease;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
 }
 .footer-bottom-area .footer-menu ul li a:hover i{
-  color: #d5ac63;
+  color: var(--accent);
 }
 
 
@@ -1227,7 +1285,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     Slogan-area.bg-clr-1 style
 =============================================
 ***/
-.slogan-area.bg-clr-1 {}
+.slogan-area.bg-clr-1 {
+  background-color: inherit;
+}
 .slogan-area.bg-clr-1::before {
   background: rgba(213, 172, 99, 0.93) none repeat scroll 0 0;
   content: "";
@@ -1393,16 +1453,16 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   text-transform: capitalize;
   border-radius: 0px;
   cursor: pointer;
-  transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-  -ms-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
+  -moz-transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
+  -ms-transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
+  -o-transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
 }
 #project-area .project-filter li.active span, 
 #project-area .project-filter li:hover span {
   background: #252525;
-  color: #d5ac63;
+  color: var(--accent);
   border: 1px solid #252525;
 }
 #project-area .single-project-item .img-holder .overlay .box .content .icon-holder {
@@ -1422,7 +1482,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   line-height: 40px;
 }
 #project-area .single-project-item .img-holder .overlay .box .content .icon-holder:hover{
-  background: #d5ac63;
+  background: var(--accent);
 }
 #project-area .loadmore-btn a {
   padding: 16px 45px;
@@ -1521,7 +1581,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 #project-grid-area .project-filter li.active span, 
 #project-grid-area .project-filter li:hover span {
-  color: #d5ac63;
+  color: var(--accent);
 }
 #project-grid-area .single-project-item .img-holder .overlay .box .content .icon-holder {
   background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
@@ -1538,10 +1598,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   display: inline-block;
   font-size: 14px;
   line-height: 40px;
-  transition: all 500ms ease;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
 }
 #project-grid-area .single-project-item .img-holder .overlay .box .content .icon-holder:hover{
-  background: #d5ac63;    
+  background: var(--accent);    
 } 
 
 
@@ -1571,7 +1631,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   line-height: 40px;
 }
 #project-area.pro-withtext-area .single-project-item .img-holder .overlay .box .content .icon-holder:hover{
-  background: #d5ac63;
+  background: var(--accent);
 }
 
 #project-area.pro-withtext-area .single-project-item .text-holder {
@@ -1585,7 +1645,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   text-transform: capitalize;
 }
 #project-area.pro-withtext-area .single-project-item .text-holder p{
-  color: #d5ac63;
+  color: var(--accent);
   font-weight: 400;
   margin: 0;
   line-height: 16px;
@@ -1622,15 +1682,19 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   height: 10px;
   margin: 5px;
   width: 10px;
-  transition: all 500ms ease;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
 }
-.project-single-v1-area #project-single-carousel{ }
+.project-single-v1-area #project-single-carousel{ 
+  margin: 0;
+}
 .project-single-v1-area #project-single-carousel .single-item .img-holder img {
   width: 100%;
 }
 
 
-#project-single-area .project-info {}
+#project-single-area .project-info {
+  margin: 0;
+}
 #project-single-area .project-info h3 {
   color: #252525;
   font-size: 24px;
@@ -1661,9 +1725,11 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 #project-single-area .project-info .project-info-list li .icon-holder i {
   font-size: 14px;
-  color: #d5ac63;
+  color: var(--accent);
 }
-#project-single-area .project-info .project-info-list li .text-holder {}
+#project-single-area .project-info .project-info-list li .text-holder {
+  padding: 0;
+}
 #project-single-area .project-info .project-info-list li .text-holder h5 {
   color: #252525;
   font-size: 16px;
@@ -1688,14 +1754,14 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 .project-single-v1-area .project-description-content .project-manager-box {
   background: #f7f7f7 none repeat scroll 0 0;
-  border-left: 1px solid #d5ac63;
+  border-left: 1px solid var(--accent);
   margin: 32px 0 0;
   overflow: hidden;
   padding: 15px 30px 21px 75px;
   position: relative;
 }
 .project-single-v1-area .project-description-content .project-manager-box::before {
-  background: #d5ac63 none repeat scroll 0 0;
+  background: var(--accent) none repeat scroll 0 0;
   content: "";
   height: 90%;
   left: 2px;
@@ -1729,7 +1795,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   font-weight: 500;
 }
 .project-single-v1-area .project-description-content .project-manager-box h5 span {
-  color: #d5ac63;
+  color: var(--accent);
   font-size: 16px;
   font-weight: 400;
 }
@@ -1742,7 +1808,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .project-single-v1-area .related-project-items .sec-title {
   padding-bottom: 44px;
 }
-.project-single-v1-area .related-project-items .single-project-item {}
+.project-single-v1-area .related-project-items .single-project-item {
+  margin: 0;
+}
 .related-project-items .img-holder .overlay .box .content .icon-holder {
   background: transparent none repeat scroll 0 0;
   border-radius: 50%;
@@ -1760,7 +1828,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   line-height: 40px;
 }
 .related-project-items .img-holder .overlay .box .content .icon-holder:hover {
-    background: #d5ac63 none repeat scroll 0 0;
+    background: var(--accent) none repeat scroll 0 0;
 }
 .related-project-items .single-project-item .text-holder {
   padding-top: 22px;
@@ -1773,7 +1841,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   text-transform: capitalize;
 }
 .related-project-items .single-project-item .text-holder p {
-  color: #d5ac63;
+  color: var(--accent);
   font-weight: 400;
   line-height: 16px;
   margin: 0;
@@ -1847,7 +1915,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
-  transition: all 500ms ease;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
 }
 #project-single-area .bottom .button a:hover{
   color: #fdc716;
@@ -1873,7 +1941,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   transition: all 500ms ease 0s;
 }
 #project-single-area .bottom .icon-holder a:hover i{
-  color: #d5ac63;
+  color: var(--accent);
 }
 
 
@@ -1891,7 +1959,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   margin-bottom: 60px;
 }
 .service-page-area .single-service-item .text-holder {
-  
+  /* Text holder padding and styling */
+  padding: 0;
 }
 .service-page-area .single-service-item .text-holder h3 {
   color: #252525;
@@ -1913,12 +1982,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   line-height: 42px;
   display: block;
   text-align: center;
-  transition: all 500ms ease;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
 }
 .service-page-area .single-service-item:hover .text-holder .readmore{
   background: #252525;
   border-color: #252525;
-  color: #d5ac63;
+  color: var(--accent);
 }
 
 
@@ -1971,7 +2040,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   text-align: center;
   text-transform: uppercase;
   width: 185px;
-  transition: all 500ms ease;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
 }
 .slogan-v2-area .slogan-v2 .button a:hover{
   background: transparent;
@@ -2143,6 +2212,79 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   }
 }
 
+/* ===============================================
+   BOLD LUXE FOOTER STYLES (STEP 3)
+=============================================== */
+/* Force all footer text, paragraphs, and links to font-weight 700 */
+.footer-area,
+.luxe-footer,
+.footer-area p,
+.luxe-footer p,
+.footer-area a,
+.luxe-footer a,
+.footer-area li,
+.luxe-footer li,
+.footer-area span,
+.luxe-footer span,
+.footer-col p,
+.footer-col a,
+.footer-col li,
+.single-footer-widget p,
+.single-footer-widget a,
+.single-footer-widget li {
+  font-weight: 700 !important;
+}
+
+/* Footer h3 and h4 headers - Gold, Weight 900, Uppercase */
+.footer-area h3,
+.luxe-footer h3,
+.footer-col h3,
+.single-footer-widget .title h3,
+.footer-area h4,
+.luxe-footer h4,
+.footer-col h4 {
+  color: #B8924E !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+}
+
+/* Footer grid layout - 3 columns on desktop, 1 column on mobile */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* ===============================================
+   NAV VISIBILITY KILL SWITCH (STEP 4)
+=============================================== */
+/* Desktop: Show desktop nav, hide mobile nav */
+@media (min-width: 1025px) {
+  .navbar-desktop {
+    display: block !important;
+  }
+  .navbar-mobile {
+    display: none !important;
+  }
+}
+
+/* Mobile/Tablet: Hide desktop nav, show mobile nav */
+@media (max-width: 1024px) {
+  .navbar-desktop {
+    display: none !important;
+  }
+  .navbar-mobile {
+    display: flex !important;
+  }
+}
+
 .hero-static {
   position: relative;
   width: 100%;
@@ -2254,12 +2396,13 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   }
 }
 .phone-link {
-  color: white;
-  text-decoration: none; 
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .phone-link:hover {
-  color: #dddddd; 
+  color: var(--accent-gold);
 }
 
 .commercial {
@@ -2303,7 +2446,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   top: 10px;
 }
 .commercial .text-holder .bottom .title h3 span{
-  color: #d5ac63;
+  color: var(--accent);
   font-family: "OilBats";
   line-height: 30px;
   margin-top: 5px;
@@ -2348,8 +2491,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .single-commerce-item .img-holder img{
   -webkit-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, border 0.5s ease;
   width: 100%;    
 }
 .single-commerce-item .img-holder .overlay .box .content a i{
@@ -2374,11 +2517,11 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   transform: scale(1.1);
 }
 .single-commerce-item .img-holder .overlay .box .content a:hover i{
-  background: #d5ac63;
+  background: var(--accent);
 }
 
 .single-commerce-item .text-holder h3 {
-  color: #d5ac63;
+  color: var(--accent);
   font-size: 20px;
   font-weight: 500;
   line-height: 28px;
@@ -2413,7 +2556,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     .burger-icon {
         font-size: 24px;
         cursor: pointer;
-        user-select: none;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
     }
 
     .mobile-contact-info {
@@ -3120,7 +3268,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .consultation-title {
-  color: #d5ac63;
+  color: var(--accent);
   font-size: 32px;
   font-weight: 400;
   flex: 1;
@@ -3142,22 +3290,28 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 .consultation-btn {
   display: inline-block;
-  background-color: #d5ac63;
+  background-color: var(--accent);
   color: #000;
   padding: 15px 35px;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
+  border: none;
+}
+
+.consultation-btn:focus-visible {
+  outline: 2px solid var(--accent-hover);
+  outline-offset: 2px;
 }
 
 .consultation-btn:hover {
   background-color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(213, 172, 99, 0.4);
+  box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4);
 }
 
 
@@ -3185,22 +3339,29 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 .top-bar-quote-btn {
     display: inline-block;
-    background-color: #d5ac63;
-    color: #fff;
+    background-color: var(--accent);
+    color: #000000 !important;
     padding: 12px 25px;
     border-radius: 4px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
-    transition: all 0.3s ease;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.top-bar-quote-btn:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 2px;
 }
 
 .top-bar-quote-btn:hover {
-    background-color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(213, 172, 99, 0.4);
+    background-color: #FFFFFF;
+    color: #000000 !important;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 }
 
 
@@ -3228,6 +3389,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .areas-trigger {
+    position: relative;
     cursor: pointer;
     color: #fff;
     display: inline-flex;
@@ -3236,13 +3398,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     transition: color 0.3s ease;
     font-size: 14px;
     white-space: nowrap;
-    
     height: auto;
     line-height: normal;
 }
 
 .areas-trigger:hover {
-    color: #d5ac63;
+    color: var(--accent-gold);
 }
 
 .dropdown-arrow {
@@ -3258,22 +3419,28 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .areas-dropdown {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 700px;
-    background: white;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    background: #111111;
+    border: 1px solid var(--accent);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
     border-radius: 8px;
     padding: 20px;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     z-index: 10001;
     margin-top: 8px;
-    
     pointer-events: none;
+    transition: visibility 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-50%) translateY(10px);
 }
 
 .areas-trigger-item:hover .areas-dropdown {
-    display: block;
+    visibility: visible;
+    opacity: 1;
     pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
 }
 
 .dropdown-grid {
@@ -3283,26 +3450,33 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .area-column h4 {
-    color: #d5ac63;
+    color: var(--accent-gold);
     margin-bottom: 12px;
     font-size: 13px;
-    font-weight: 600;
-    border-bottom: 1px solid #eee;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(184, 146, 78, 0.3);
     padding-bottom: 6px;
 }
 
 .area-column a {
     display: block;
     padding: 4px 0;
-    color: #333;
+    color: #CCCCCC;
     text-decoration: none;
     font-size: 12px;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 1px solid transparent;
 }
 
 .area-column a:hover {
-    color: #d5ac63;
-    transform: translateX(3px);
+    color: #FFFFFF;
+    border-bottom: 1px solid var(--accent);
+}
+
+.area-column a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 
@@ -3339,22 +3513,6 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 
-.areas-dropdown {
-    position: absolute;
-    top: calc(100% + 2px); 
-    left: 0;
-    width: 700px;
-    background: white;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    border-radius: 8px;
-    padding: 20px;
-    display: none;
-    z-index: 10001;
-    
-    transition: opacity 0.2s ease 0.1s;
-}
-
-
 .areas-trigger-item::after {
     content: '';
     position: absolute;
@@ -3364,12 +3522,6 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     height: 10px; 
     background: transparent;
     z-index: 10002;
-}
-
-.areas-trigger-item:hover .areas-dropdown,
-.areas-trigger-item:hover::after + .areas-dropdown,
-.areas-dropdown:hover {
-    display: block;
 }
 
 
@@ -3387,10 +3539,15 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     justify-content: space-between;
     cursor: pointer;
     font-weight: 600;
-    padding: 10px 0;
+    padding: 12px 15px;
     background: rgba(255,255,255,0.1);
     border-radius: 6px;
-    padding: 12px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-areas-trigger:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 .mobile-areas-title {
@@ -3407,17 +3564,20 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .mobile-areas-dropdown {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     margin-top: 10px;
     background: rgba(255,255,255,0.1);
     border-radius: 6px;
     padding: 15px;
-    max-height: 400px;
+    max-height: calc(100vh - 70px);
     overflow-y: auto;
+    transition: visibility 0.3s ease, opacity 0.3s ease;
 }
 
 .mobile-areas-trigger.active + .mobile-areas-dropdown {
-    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 .mobile-area-column {
@@ -3429,7 +3589,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .mobile-area-column h4 {
-    color: #d5ac63;
+    color: var(--accent);
     margin-bottom: 12px;
     font-size: 14px;
     font-weight: 600;
@@ -3444,15 +3604,20 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     padding: 10px 15px;
     font-size: 14px;
     border-left: 3px solid transparent;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
     margin-bottom: 5px;
     border-radius: 4px;
 }
 
 .mobile-area-column a:hover {
-    background: rgba(213, 172, 99, 0.2);
-    border-left-color: #d5ac63;
-    transform: translateX(5px);
+    background: rgba(197, 160, 89, 0.2);
+    border-left-color: var(--accent);
+    color: var(--accent);
+}
+
+.mobile-area-column a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 
@@ -3788,11 +3953,14 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 .top-bar-area .areas-dropdown,
 .top-bar-area .services-dropdown {
-    background-color: white !important;
+    background-color: #111111 !important;
+    border: 1px solid var(--accent) !important;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5) !important;
 }
 
 .top-bar-area .nav-link {
-    color: white !important;
+    color: #FFFFFF !important;
+    transition: color 0.3s ease;
 }
 
 .top-bar-area .contact-info-left ul {
@@ -3812,8 +3980,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .top-bar-area .nav-link:hover {
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
+    color: var(--accent-gold) !important;
 }
 
 .mobile-areas-list {
@@ -3937,36 +4104,29 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     text-decoration: none;
     font-size: 13px;
 }
-/* Logo Styling (Premium Minimal Look) */
+/* Logo Styling (Luxe Antique Brass Aesthetic) */
 .logo {
-    display: inline-block;
-    font-size: 1.8rem; /* Fallback text size if no image */
-    font-weight: bold;
-    color: #d4ac64; /* Gold accent for text fallback */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.logo:hover {
-    color: #c19a51; /* Slightly darker gold on hover */
+    display: flex;
+    align-items: center;
+    max-height: 80px;
 }
 
 .logo img {
-    height: auto; /* Keeps aspect ratio */
-    max-height: 40px; /* Base size - adjust as needed */
+    height: 60px; /* Precise luxury scaling */
     width: auto;
-    display: block; /* Removes bottom space */
-    transition: transform 0.3s ease;
+    object-fit: contain;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
 }
 
-.logo img:hover {
-    transform: scale(1.05); /* Slight zoom on hover for premium feel */
+.logo:hover img {
+    transform: scale(1.03);
 }
 
-/* Responsive for Mobile */
-@media (max-width: 768px) {
+/* Mobile Logo Styling */
+@media (max-width: 1024px) {
     .logo img {
-        max-height: 35px; /* Smaller on mobile */
+        height: 45px; /* Mobile header logo size */
     }
 }
 /* Dynamic Navbar Styling (Adjustable Gaps, Uniform, High Hoverability) */
@@ -3986,46 +4146,20 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     gap: 15px; /* Base gap - minimal for small screens */
 }
 
-/* Logo Responsive Resize & Sticking Alignment */
-.logo {
+/* Mobile Navigation Logo - Centered in Slide-out Menu */
+.mobile-nav .logo,
+.mobile-contact-info .logo {
     display: flex;
-    align-items: center;
-    text-decoration: none;
-    flex-shrink: 0; /* Prevents squishing */
-    position: sticky; /* Sticks in place as screen widens - if in a fixed nav */
-    left: 0; /* Pins to left edge */
-    z-index: 10; /* Keeps above other elements */
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-top: 10px;
 }
 
-.logo img {
-    height: auto;
+.mobile-nav .logo img,
+.mobile-contact-info .logo img {
+    height: 45px;
     width: auto;
-    transition: max-width 0.3s ease; /* Smooth resize */
-}
-
-/* Dynamic Resize Based on Screen Size (Increases/Decreases Width) */
-@media (min-width: 1200px) {
-    .logo img {
-        max-width: 20vw; /* Larger on wide screens (e.g., 20% of viewport) - adjust % as needed */
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-    .logo img {
-        max-width: 18vw; /* Medium size */
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .logo img {
-        max-width: 25vw; /* Slightly larger on tablets for visibility */
-    }
-}
-
-@media (max-width: 767px) {
-    .logo img {
-        max-width: 80vw; /* Decreases to fit mobile - almost full width if needed */
-    }
+    object-fit: contain;
 }
 
 /* Ensure Navbar Container Keeps Logo Stuck Left */
@@ -4090,3 +4224,30 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
         width: 100%; /* Full width for easy tapping */
     }
 }
+.footer-social-links .social-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-social-links .social-icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #ffffff; /* change if needed */
+    min-width: 24px;
+}
+
+.footer-social-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-social-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+

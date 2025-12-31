@@ -205,7 +205,7 @@ Luxe Wallpapers & Vinyl/
 │   ├── heritage-hills.html
 │   ├── hyde-park.html
 │   ├── montopolis.html
-│   ├── north-austin.html
+│   ├── north-Richmond.html
 │   ├── north-lamar.html
 │   ├── parker-lane.html
 │   ├── pleasant-valley.html
