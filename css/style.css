@@ -4251,3 +4251,227 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 
 
+
+
+
+
+
+
+/* Global styles affecting footer */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif; /* Assuming a clean sans-serif font */
+  color: #ffffff; /* White text */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Footer main container */
+.luxe-footer {
+  background-color: #000000; /* Black background */
+  padding: 60px 0 40px; /* Top and bottom padding */
+  font-size: 14px; /* Base font size */
+  position: relative;
+}
+
+/* Grid layout for columns */
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px; /* Space between columns */
+}
+
+/* Common column styles */
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Brand column */
+.footer-brand {
+  max-width: 300px; /* Slightly wider for description */
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  max-width: 200px; /* Adjust based on actual logo size */
+  height: auto;
+}
+
+.footer-desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #cccccc; /* Light gray for description */
+  margin-bottom: 20px;
+}
+
+/* Social icons */
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #d4af37; /* Gold border */
+  border-radius: 50%; /* Circular */
+  color: #d4af37; /* Gold icon color */
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-link:hover {
+  background-color: #d4af37; /* Gold background on hover */
+  color: #000000; /* Black icon on hover */
+}
+
+.social-link i {
+  font-size: 18px; /* Icon size */
+}
+
+/* Services column */
+.footer-services h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #d4af37; /* Gold heading */
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-services li {
+  margin-bottom: 10px;
+}
+
+.footer-services a {
+  color: #ffffff; /* White links */
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-services a:hover {
+  color: #d4af37; /* Gold on hover */
+}
+
+/* Contact column */
+.footer-contact h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #d4af37; /* Gold heading */
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.contact-line {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.contact-line a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-line a:hover {
+  color: #d4af37; /* Gold on hover */
+}
+
+.quote-cta {
+  display: inline-block;
+  background-color: #d4af37; /* Gold button */
+  color: #000000; /* Black text */
+  padding: 10px 20px;
+  border-radius: 5px; /* Slightly rounded */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.quote-cta:hover {
+  background-color: #b8962e; /* Darker gold on hover */
+}
+
+/* Bottom elements (copyright and extra button) */
+.luxe-footer::after {
+  content: "";
+  display: block;
+  border-top: 1px solid #333333; /* Dark gray separator, if present */
+  margin: 40px auto 20px;
+  max-width: 1200px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #888888; /* Gray copyright */
+  padding: 0 20px;
+}
+
+.free-quote-btn {
+  background-color: #d4af37;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 30px; /* Pill-shaped */
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space for phone icon */
+  transition: background-color 0.3s;
+}
+
+.free-quote-btn:hover {
+  background-color: #b8962e;
+}
+
+.free-quote-btn::before {
+  content: "\f095"; /* Font Awesome phone icon, assuming fa-solid */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-col {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .quote-cta {
+    display: block;
+    text-align: center;
+  }
+}
