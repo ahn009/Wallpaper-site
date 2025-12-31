@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Luxe Wallpaper & Vinyl
+    <title>Luxe Wallpapers & Vinyl
     </title> <!-- 1 ЗМІНА -->
 
     <!-- responsive meta -->
@@ -508,19 +508,164 @@
     text-decoration: none;
     font-size: 13px;
 }
+/* =========================
+   BRAND COLORS
+========================= */
+:root {
+    --brand-black: #0b0b0b;
+    --brand-gold: #c9a24d;
+    --brand-gold-soft: #e6c87a;
+}
+
+/* =========================
+   VISIBILITY CONTROL
+========================= */
+.desktop-nav {
+    display: block !important;
+}
+
+.mobile-nav {
+    display: none !important;
+}
+
+@media (max-width: 991.98px) {
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .mobile-nav {
+        display: block !important;
+    }
+}
+
+/* =========================
+   MOBILE NAV BASE
+========================= */
+.mobile-nav {
+    background-color: var(--brand-black);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    border-bottom: 1px solid rgba(201,162,77,0.3);
+}
+
+/* Prevent content hiding behind fixed nav */
+body {
+    padding-top: 70px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.mobile-nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+}
+
+.mobile-logo img {
+    height: 38px;
+}
+
+/* =========================
+   HAMBURGER (GOLD)
+========================= */
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px 0;
+    background: var(--brand-gold);
+}
+
+/* =========================
+   MOBILE MENU PANEL
+========================= */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: var(--brand-black);
+    padding: 18px;
+    border-top: 1px solid rgba(201,162,77,0.2);
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+/* =========================
+   LINKS
+========================= */
+.mobile-menu a,
+.mobile-menu summary {
+    color: #fff;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.mobile-menu a:hover,
+.mobile-menu summary:hover {
+    color: var(--brand-gold);
+}
+
+/* =========================
+   DROPDOWNS
+========================= */
+.mobile-menu details {
+    border-bottom: 1px solid rgba(201,162,77,0.15);
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+}
+
+.mobile-menu details a {
+    padding-left: 16px;
+    color: #ddd;
+    font-weight: 400;
+}
+
+/* =========================
+   PHONE & CTA
+========================= */
+.mobile-phone {
+    color: var(--brand-gold);
+    font-weight: 700;
+    margin-top: 14px;
+}
+
+.mobile-cta {
+    margin-top: 20px;
+    background: var(--brand-gold);
+    color: #000;
+    padding: 14px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 700;
+}
 
 
     </style>
 
 
     <meta name="description"
-        content="Luxe Wallpaper & Vinyl begin by observing how each interior reflects the city's blend of new construction, renovated older homes, eclectic design preferences, and abundant natural light, noting where walls show texture inconsistencies, settling marks, or layers of past finishes that may influence how new wallcovering will appear once installed. After these details are evaluated, the surfaces are prepared to a smooth and stable state that supports even adhesion and ensures consistent clarity in both color and pattern. The installation then proceeds with a calm and precise rhythm that allows each panel to settle naturally, creating clean edges, soft transitions, and a unified visual flow that suits the creative and contemporary character of Richmond interiors. The completed work feels cohesive, durable, and thoughtfully integrated into the home, and the entire process is handled quietly so daily routines continue uninterrupted and the space remains fully functional throughout the project.">
+        content="Luxe Wallpapers & Vinyl begin by observing how each interior reflects the city’s blend of new construction, renovated older homes, eclectic design preferences, and abundant natural light, noting where walls show texture inconsistencies, settling marks, or layers of past finishes that may influence how new wallcovering will appear once installed. After these details are evaluated, the surfaces are prepared to a smooth and stable state that supports even adhesion and ensures consistent clarity in both color and pattern. The installation then proceeds with a calm and precise rhythm that allows each panel to settle naturally, creating clean edges, soft transitions, and a unified visual flow that suits the creative and contemporary character of Richmond interiors. The completed work feels cohesive, durable, and thoughtfully integrated into the home, and the entire process is handled quietly so daily routines continue uninterrupted and the space remains fully functional throughout the project.">
     <!-- 2 ЗМІНА -->
     <script type="application/ld+json">
         {
             "@context": "http://schema.org/",
             "@type": "Organization",
-            "name": "Luxe Wallpaper & Vinyl",  
+            "name": "Luxe Wallpapers & Vinyl",  
             "url": "Richmond-wallpaper-installers.com"    
         }
         </script> <!-- 3 ЗМІНА -->
@@ -533,62 +678,16 @@
 </head>
 
 <body>
-<!-- Mobile Header Bar - Always Visible -->
-<<<<<<< HEAD
-    <div class="mobile-header-bar mobile-nav-bar navbar-mobile">
-        <div class="mobile-logo">
-            <a href="index.html">
-                <img src="images/logo.png" alt="Luxe Wallpaper & Vinyl Logo" height="50px" height="50px">
-=======
-    <div class="mobile-header-bar mobile-nav-bar">
-        <div class="mobile-logo">
-            <a href="index.html">
-                <img src="images/logo.png" alt="Luxe Wallpaper & Vinyl Logo">
->>>>>>> 4f18fa7e0a42e46c1a7de5b57cb4dbf483d84285
-            </a>
-        </div>
-        <div class="mobile-nav-toggler" onclick="toggleTopBar()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
 
-    <!-- Mobile Menu Container -->
-    <div id="mobileTopBar" class="mobile-top-bar-container" style="display:none;">
-        <nav class="mobile-menu-nav">
-            <ul class="mobile-menu-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#locations">Locations</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="tel:+12542670001" class="mobile-phone-link">(346) 352-2770</a></li>
-                <li><a href="#quote" class="mobile-quote-btn">Get Free Quote</a></li>
-            </ul>
-        </nav>
-    </div>
-
-<<<<<<< HEAD
-    <section class="main-menu-wrapper top-bar-area navbar-desktop">
-=======
-    <section class="main-menu-wrapper top-bar-area">>
->>>>>>> 4f18fa7e0a42e46c1a7de5b57cb4dbf483d84285
+        <section class="top-bar-area">
     <div class="container">
         <div class="row">
             <div class="col-lg-7 col-md-7">
                 <div class="contact-info-left clearfix">
                     <ul>
+
                         <li>
-                            <div class="logo">
-                                <a href="index.html">
-<<<<<<< HEAD
-                                    <img src="images/logo.png" alt="Luxe Wallpaper & Vinyl Logo" height="50px">
-=======
-                                    <img src="images/logo.png" alt="Luxe Wallpaper & Vinyl Logo">
->>>>>>> 4f18fa7e0a42e46c1a7de5b57cb4dbf483d84285
-                                </a>
-                            </div>
+                            <a href="index.html" class="nav-link"><img src="images/logo.png" alt="Luxe Wallpapers & Vinyl" style="height: 60px;"></a>
                         </li>
                         <li>
                             <a href="index.html" class="nav-link">Home</a>
@@ -601,45 +700,50 @@
                                 <div class="areas-dropdown">
                                     <div class="dropdown-grid">
                                         <div class="area-column">
-                                           <h4>Central Houston</h4>
-                                           <a href="locations/downtown.html">Downtown</a>
-                                           <a href="locations/midtown.html">Midtown</a>
-                                           <a href="locations/montrose.html">Montrose</a>
-                                           <a href="locations/museum-district.html">Museum District</a>
+                                           <h4>Central Richmond</h4>
+                                           <a href="index.html">Richmond</a>
+                                           <a href="/locations/downtown.html">Downtown</a>
+                                           <a href="/locations/university-of-texas.html">University of Texas</a>
+                                           <a href="/locations/west-university.html">West University</a>
+                                           <a href="/locations/hyde-park.html">Hyde Park</a>
                                         </div>
                                         <div class="area-column">
-                                            <h4>Inner Loop</h4>
-                                            <a href="locations/river-oaks.html">River Oaks</a>
-                                            <a href="locations/upper-kirby.html">Upper Kirby</a>
-                                            <a href="locations/west-university.html">West University</a>
-                                            <a href="locations/rice-military.html">Rice Military</a>
-                                            <a href="locations/the-heights.html">The Heights</a>
+                                            <h4>North Richmond</h4>
+                                            <a href="/locations/north-Richmond.html">North Richmond</a>
+                                            <a href="/locations/allandale.html">Allandale</a>
+                                            <a href="/locations/brentwood.html">Brentwood</a>
+                                            <a href="/locations/north-lamar.html">North Lamar</a>
+                                            <a href="/locations/georgian-acres.html">Georgian Acres</a>
+                                            <a href="/locations/heritage-hills.html">Heritage Hills</a>
                                         </div>
                                         <div class="area-column">
-                                            <h4>West Houston</h4>
-                                            <a href="locations/memorial.html">Memorial</a>
-                                            <a href="locations/memorial-villages.html">Memorial Villages</a>
-                                            <a href="locations/spring-branch.html">Spring Branch</a>
-                                            <a href="locations/energy-corridor.html">Energy Corridor</a>
-                                            <a href="locations/briar-forest.html">Briar Forest</a>
-                                            <a href="locations/westchase.html">Westchase</a>
+                                            <h4>East Richmond</h4>
+                                            <a href="/locations/windsor-park.html">Windsor Park</a>
+                                            <a href="/locations/windsor-hills.html">Windsor Hills</a>
+                                            <a href="/locations/pleasant-valley.html">Pleasant Valley</a>
+                                            <a href="/locations/montopolis.html">Montopolis</a>
+                                            <a href="/locations/riverside.html">Riverside</a>
+                                            <a href="/locations/rose-dale.html">Rosedale</a>
                                         </div>
                                         <div class="area-column">
-                                            <h4>Southwest Houston</h4>
-                                            <a href="locations/alief.html">Alief</a>
-                                            <a href="locations/mission-bend.html">Mission Bend</a>
-                                            <a href="locations/meyerland.html">Meyerland</a>
-                                            <a href="locations/westbury.html">Westbury</a>
-                                            <a href="locations/bellaire.html">Bellaire</a>
-                                            <h4>Houston Suburbs</h4>
-                                            <a href="locations/richmond.html">Richmond</a>
-                                            <a href="locations/sugar-land.html">Sugar Land</a>
-                                            <a href="locations/katy.html">Katy</a>
-                                            <a href="locations/rosenberg.html">Rosenberg</a>
-                                            <a href="locations/fulshear.html">Fulshear</a>
-                                            <a href="locations/missouri-city.html">Missouri City</a>
-                                            <a href="locations/pearland.html">Pearland</a>
-                                            <a href="locations/cypress.html">Cypress</a>
+                                            <h4>South Richmond</h4>
+                                            <a href="/locations/south-lamar.html">South Lamar</a>
+                                            <a href="/locations/zilker.html">Zilker</a>
+                                            <a href="/locations/barton-hills.html">Barton Hills</a>
+                                            <a href="/locations/garrison-park.html">Garrison Park</a>
+                                            <a href="/locations/parker-lane.html">Parker Lane</a>
+                                            <a href="/locations/south-manchaca.html">South Manchaca</a>
+                                            <a href="/locations/south-river-city.html">South River City</a>
+                                        </div>
+                                        <div class="area-column">
+                                            <h4>West & Outskirts</h4>
+                                            <a href="/locations/west-oak-hill.html">West Oak Hill</a>
+                                            <a href="/locations/east-oak-hill.html">East Oak Hill</a>
+                                            <a href="/locations/wells-branch.html">Wells Branch</a>
+                                            <a href="/locations/st-johns.html">St. Johns</a>
+                                            <a href="/locations/franklin-park.html">Franklin Park</a>
+                                            <a href="/locations/vineland.html">Vineland</a>
+                                            <a href="/locations/sweet-briar.html">Sweet Briar</a>
                                         </div>
                                     </div>
                                 </div>
@@ -687,7 +791,7 @@
 
                         <li>
                             <a href="tel:+12542670001" class="phone-link"> <!--Зміна-->
-                                <span class="flaticon-technology"> (346) 352-2770</span> <!--Зміна-->
+                                <span class="flaticon-technology">(254) 267-0001</span> <!--Зміна-->
                             </a> 
                         </li>
                     </ul>
@@ -702,18 +806,113 @@
     </div>
 </section>
 
-<section class="portfolio-hero">
+<div class="mobile-top-bar">
+    <div class="burger-icon" onclick="toggleTopBar()">
+        ☰
+    </div>
+    <div class="mobile-contact-info" id="mobileTopBar">
+        <ul>
+            <li>
+                <a href="index.html" class="mobile-nav-link">Home</a>
+            </li>
+
+            <li class="mobile-areas-section" onclick="toggleMobileSection(this)">
+                <div class="mobile-areas-title">Locations</div>
+                <div class="mobile-areas-list">
+                    <div class="mobile-area-group">
+                        
+                        <a href="index.html">Richmond</a>
+                        <a href="/locations/downtown.html">Downtown</a>
+                        <a href="/locations/university-of-texas.html">University of Texas</a>
+                        <a href="/locations/west-university.html">West University</a>
+                        <a href="/locations/hyde-park.html">Hyde Park</a>
+                    
+                        
+                        <a href="/locations/north-Richmond.html">North Richmond</a>
+                        <a href="/locations/allandale.html">Allandale</a>
+                        <a href="/locations/brentwood.html">Brentwood</a>
+                        <a href="/locations/north-lamar.html">North Lamar</a>
+                        <a href="/locations/georgian-acres.html">Georgian Acres</a>
+                        <a href="/locations/heritage-hills.html">Heritage Hills</a>
+                    
+                        
+                        <a href="/locations/windsor-park.html">Windsor Park</a>
+                        <a href="/locations/windsor-hills.html">Windsor Hills</a>
+                        <a href="/locations/pleasant-valley.html">Pleasant Valley</a>
+                        <a href="/locations/montopolis.html">Montopolis</a>
+                        <a href="/locations/riverside.html">Riverside</a>
+                        <a href="/locations/rose-dale.html">Rosedale</a>
+                    
+                        
+                         <a href="/locations/south-lamar.html">South Lamar</a>
+                         <a href="/locations/zilker.html">Zilker</a>
+                         <a href="/locations/barton-hills.html">Barton Hills</a>
+                         <a href="/locations/garrison-park.html">Garrison Park</a>
+                         <a href="/locations/parker-lane.html">Parker Lane</a>
+                         <a href="/locations/south-manchaca.html">South Manchaca</a>
+                         <a href="/locations/south-river-city.html">South River City</a>
+                    
+                        
+                        <a href="/locations/west-oak-hill.html">West Oak Hill</a>
+                        <a href="/locations/east-oak-hill.html">East Oak Hill</a>
+                        <a href="/locations/wells-branch.html">Wells Branch</a>
+                        <a href="/locations/st-johns.html">St. Johns</a>
+                        <a href="/locations/franklin-park.html">Franklin Park</a>
+                        <a href="/locations/vineland.html">Vineland</a>
+                        <a href="/locations/sweet-briar.html">Sweet Briar</a>
+                    </div>
+                </div>
+            </li> <!--Зміна-->
+
+            <li class="mobile-areas-section" onclick="toggleMobileSection(this)">
+                <div class="mobile-areas-title">Services </div>
+                <div class="mobile-areas-list">
+                    <div class="mobile-area-group">
+                        <a href="/services/wallpaper-installation.html">Wallpaper Installation</a>
+                        <a href="/services/wallpaper-removal.html">Wallpaper Removal</a>
+                        <a href="/services/custom-wallpaper.html">Custom Wallpaper</a>
+                        <a href="/services/commercial-installation.html">Commercial Installation</a>
+                        <a href="/services/accent-walls.html">Accent Walls</a>
+                        <a href="/services/textured-walls.html">Textured Walls</a>
+                        <a href="/services/wall-prep.html">Wall Preparation</a>
+                        <a href="/services/murals-installation.html">Murals Installation</a>
+                        <a href="/services/grasscloth.html">Grasscloth Wallpaper</a>
+                        <a href="/services/vinyl-wallpaper.html">Vinyl Wallpaper</a>
+                        <a href="/services/fabric-wallpaper.html">Fabric Wallpaper</a>
+                        <a href="/services/border-installation.html">Border Installation</a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+            </li>
+
+            <li>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </li>
+
+            <li>
+                <a href="tel:+12542670001" class="mobile-phone-link"> <!--Зміна-->
+                    <span class="flaticon-technology">(254) 267-0001</span>  <!--Зміна-->
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <section class="portfolio-hero">
         <img src="images/slides/111-800.webp" srcset="
     images/slides/111-800.webp 800w,
     images/slides/111-1500.webp 1500w,
     images/slides/111-3000.webp 3000w" sizes="(max-width: 768px) 800px, (max-width: 1920px) 1500px, 3000px"
-            width="3000" height="1582" alt="Luxe Wallpaper & Vinyl" loading="eager" decoding="async" /> <!--Зміна-->
+            width="3000" height="1582" alt="Luxe Wallpapers & Vinyl" loading="eager" decoding="async" /> <!--Зміна-->
         <div class="portfolio-hero-content">
             <h1 class="portfolio-title">Portfolio</h1>
         </div>
     </section>
 
-    <section class="portfolio-gallery">
+     <section class="portfolio-gallery">
     <div class="gallery-grid" id="galleryGrid">
         <!-- Portfolio Images 1-42 -->
         <div class="gallery-item"><img src="images/porfolio/1.jpg" alt="Portfolio Image 1"></div>
@@ -760,60 +959,20 @@
         <div class="gallery-item"><img src="/images/porfolio/42.jpg" alt="Portfolio Image 42"></div>
     </div>
 </section>
+
     <!-- Стики-кнопка -->
     <button class="sticky-btn" id="stickyBtn">
         <i class="fas fa-phone-alt"></i> Get Free Quote
     </button>
 
-    <div class="feedback-form-container" id="quote">
-        <h3>Get Your Free Wallpaper Quote</h3>
-        <form id="wallpaperContactForm" class="contact-form" action="send.php" method="POST">
-            <div class="form-row">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="phoneInput" name="phone" value="+1 (" placeholder="+1 (XXX) XXX-XXXX"
-                        required>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <input type="text" name="city" placeholder="City" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <textarea name="message"
-                    placeholder="Tell us about your project (room type, square footage, desired wallpaper style)"></textarea>
-            </div>
-
-            <div class="g-recaptcha" data-sitekey="6LcvmiwsAAAAAFrHzOi8I6nUP-joxr3jHIL9Wz-J"></div> <!--Зміна-->
-
-            <div class="form-submit">
-                <button type="submit" class="submit-btn">Send Request</button>
-
-            </div>
-        </form>
-        <div id="form-success" style="display: none;">
-            <p>We'll get back to you within 1 business day. Your info stays private.</p>
-        </div>
-    </div>
-
-            <footer class="luxe-footer" role="contentinfo">
+   <footer class="luxe-footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <!-- Column 1: Brand & Social -->
       <div class="footer-col footer-brand">
         <div class="footer-logo">
           <a href="index.html">
-<<<<<<< HEAD
-            <img src="images/logo.png" alt="Luxe Wallpaper & Vinyl Logo" height="50px">
-=======
             <img src="images/logo.png" alt="Luxe Wallpaper & Vinyl Logo">
->>>>>>> 4f18fa7e0a42e46c1a7de5b57cb4dbf483d84285
           </a>
         </div>
         <p class="footer-desc">Premium wallpaper installation and wallcovering services across the Greater Houston Area. Experience luxury craftsmanship in every project.</p>
@@ -849,6 +1008,9 @@
         <p class="contact-line">
           <a href="tel:+13463522770">(346) 352-2770</a>
         </p>
+        <p>
+            1234 Luxe St., Houston, TX 77002
+        </p>
         <p class="contact-line">
           Email: <a href="mailto:info@luxewallpapers.com">info@luxewallpapers.com</a>
         </p>
@@ -856,13 +1018,13 @@
       </div>
     </div>
   </div>
-</footer> 
+</footer>
 
 
     <section class="footer-bottom-area">
 
         <div class="container text-center">
-            <p>© <span id="year"></span> Luxe Wallpaper & Vinyl</p>
+            <p>© 2025 Luxe Wallpapers & Vinyl</p>
             <!-- 29 ЗМІНА -->
 
         </div>
@@ -903,6 +1065,8 @@
 
 
 
+
+
     <!-- thm custom script -->
     <script src="js/custom.js"></script>
 
@@ -910,39 +1074,13 @@
 
 
 
-    <script src="js/luxe-interactive.js"></script>
-<script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+
 </body>
 
 <script>
-<<<<<<< HEAD
-        function toggleTopBar() {
-        var panel = document.getElementById("mobileTopBar");
-        if (panel) {
-            panel.classList.toggle("active");
-        }
-    
-    
-=======
     function toggleTopBar() {
         var panel = document.getElementById("mobileTopBar");
-        if (panel) {
-            // Toggle using a class for better reliability
-            panel.classList.toggle("open-menu");
-            // Fallback for immediate display toggle
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        }
-    } else {
-                panel.style.display = "block";
-            }
-        }
->>>>>>> 4f18fa7e0a42e46c1a7de5b57cb4dbf483d84285
+        panel.style.display = (panel.style.display === "block") ? "none" : "block";
     }
 
     function toggleMobileAreas(element) {
