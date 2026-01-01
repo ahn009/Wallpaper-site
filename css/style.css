@@ -9,8 +9,7 @@
 02. Flaticon reset styles
 03. Header styles
 04. Mainmenu styles
-05. Rev_slider_wrapper styles
-66. Welcome area Style
+06. Welcome area Style
 07. Service area style
 08. Latest project area style
 09. Testimonial area style
@@ -46,21 +45,8 @@
 
 @import url(bootstrap.min.css);
 @import url(font-awesome.min.css);
-@import url(jquery.bxslider.css);
-
-@import url(jquery.bootstrap-touchspin.css);
-
-
-/*** Price filter***/
-
-
 
 @import url(../fonts/flaticon/flaticon.css);
-@import url(../assets/jquery-ui-1.11.4/jquery-ui.css);
-/*** Revolution slider ***/
-
-
-/*** Revolution slider ***/
 
 
 
@@ -502,14 +488,6 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 /* Mainmenu css*/
 
-
-
-
-/*** 
-=============================================
-    Rev Slider Wrapper style
-=============================================
-***/
 
 
 
@@ -2142,74 +2120,15 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 ***/
 
 
-
-
-/*** 
-=============================================
-   Pricing Table area  style
-=============================================
-***/
-
-
 .footer-area {
-  padding: 50px 0;
-  background-color: #1c1c1c;
-  color: #fff;
+  background: #0A0A0A !important;
+  padding-bottom: 75px;
+  padding-top: 80px;
 }
 
 .footer-contact-info li {
   font-size: 15px;
   margin-bottom: 12px;
-}
-
-.footer-social-links ul.social-list {
-  padding-left: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.footer-social-links ul.social-list li {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  width: 50%;
-  margin-bottom: 10px;
-}
-
-.footer-social-links .social-icon {
-  width: 28px;       
-  height: 28px;
-  margin-right: 10px;
-  filter: brightness(0) invert(1);
-}
-
-.footer-social-links a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-social-links a:hover {
-  color: #f0c040;
-}
-
-.footer-map iframe {
-  width: 100%;
-  height: 100%;
-  min-height: 400px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-@media (max-width: 768px) {
-  .footer-map iframe {
-    height: 300px;
-    margin-top: 30px;
-  }
-  .footer-area .row {
-    flex-direction: column;
-  }
 }
 
 /* ===============================================
@@ -4345,8 +4264,8 @@ body {
 /* Services column */
 .footer-services h4 {
   font-size: 16px;
-  font-weight: bold;
-  color: #d4af37; /* Gold heading */
+  font-weight: 900 !important;
+  color: #B8924E !important;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -4362,21 +4281,24 @@ body {
 }
 
 .footer-services a {
-  color: #ffffff; /* White links */
+  color: #FFFFFF !important;
   text-decoration: none;
   font-size: 14px;
-  transition: color 0.3s;
+  font-weight: 700 !important;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .footer-services a:hover {
-  color: #d4af37; /* Gold on hover */
+  color: #B8924E !important;
+  transform: translateX(8px);
 }
 
-/* Contact column */
+/* Contact column */            
 .footer-contact h4 {
   font-size: 16px;
-  font-weight: bold;
-  color: #d4af37; /* Gold heading */
+  font-weight: 900 !important;
+  color: #B8924E !important;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -4384,34 +4306,43 @@ body {
 .contact-line {
   font-size: 14px;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
 }
 
 .contact-line a {
-  color: #ffffff;
+  color: #FFFFFF !important;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-weight: 700 !important;
 }
 
 .contact-line a:hover {
-  color: #d4af37; /* Gold on hover */
+  color: #B8924E !important;
+  transform: translateX(8px);
 }
 
 .quote-cta {
   display: inline-block;
-  background-color: #d4af37; /* Gold button */
-  color: #000000; /* Black text */
-  padding: 10px 20px;
-  border-radius: 5px; /* Slightly rounded */
-  text-decoration: none;
-  font-weight: bold;
+  background-color: #B8924E !important;
+  color: #000000 !important;
+  padding: 12px 25px !important;
+  border-radius: 4px;
+  text-decoration: none !important;
+  font-weight: 900 !important;
   font-size: 14px;
   margin-top: 20px;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .quote-cta:hover {
-  background-color: #b8962e; /* Darker gold on hover */
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  transform: translateX(8px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 }
 
 /* Bottom elements (copyright and extra button) */
@@ -4474,4 +4405,424 @@ body {
     display: block;
     text-align: center;
   }
+}
+
+
+/* =========================
+   NAV VISIBILITY CONTROL
+========================= */
+.desktop-nav {
+    display: block;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+}
+
+/* =========================
+   MOBILE NAV STYLES
+========================= */
+.mobile-nav {
+    position: relative;
+    background: #fff;
+    z-index: 9999;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+}
+
+.mobile-logo img {
+    height: 40px;
+}
+
+/* HAMBURGER */
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px 0;
+    background: #000;
+}
+
+/* MENU */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    padding: 16px;
+}
+
+.mobile-menu a,
+.mobile-menu summary {
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.mobile-menu details a {
+    padding-left: 16px;
+    font-weight: 400;
+}
+
+/* CTA */
+.mobile-cta {
+    margin-top: 16px;
+    padding: 12px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+}
+
+/* PHONE */
+.mobile-phone {
+    margin-top: 12px;
+    font-weight: 700;
+}
+
+/* OPEN STATE */
+.mobile-menu.open {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   BRAND COLORS
+========================= */
+:root {
+    --brand-black: #0b0b0b;
+    --brand-gold: #c9a24d;
+    --brand-gold-soft: #e6c87a;
+}
+
+/* =========================
+   VISIBILITY CONTROL
+========================= */
+.desktop-nav {
+    display: block !important;
+}
+
+.mobile-nav {
+    display: none !important;
+}
+
+@media (max-width: 991.98px) {
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .mobile-nav {
+        display: block !important;
+    }
+}
+
+/* =========================
+   MOBILE NAV BASE
+========================= */
+.mobile-nav {
+    background-color: var(--brand-black);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    border-bottom: 1px solid rgba(201,162,77,0.3);
+}
+
+/* Prevent content hiding behind fixed nav */
+body {
+    padding-top: 70px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.mobile-nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+}
+
+.mobile-logo img {
+    height: 38px;
+}
+
+/* =========================
+   HAMBURGER (GOLD)
+========================= */
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px 0;
+    background: var(--brand-gold);
+}
+
+/* =========================
+   MOBILE MENU PANEL
+========================= */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: var(--brand-black);
+    padding: 18px;
+    border-top: 1px solid rgba(201,162,77,0.2);
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+/* =========================
+   LINKS
+========================= */
+.mobile-menu a,
+.mobile-menu summary {
+    color: #fff;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.mobile-menu a:hover,
+.mobile-menu summary:hover {
+    color: var(--brand-gold);
+}
+
+/* =========================
+   DROPDOWNS
+========================= */
+.mobile-menu details {
+    border-bottom: 1px solid rgba(201,162,77,0.15);
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+}
+
+.mobile-menu details a {
+    padding-left: 16px;
+    color: #ddd;
+    font-weight: 400;
+}
+
+/* =========================
+   PHONE & CTA
+========================= */
+.mobile-phone {
+    color: var(--brand-gold);
+    font-weight: 700;
+    margin-top: 14px;
+}
+
+.mobile-cta {
+    margin-top: 20px;
+    background: var(--brand-gold);
+    color: #000;
+    padding: 14px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 700;
+}
+/* ================================
+   HARD LOCK DESKTOP NAVBAR LOGO
+================================ */
+
+/* Lock navbar height */
+.top-bar-area {
+    height: 80px !important;
+    background: #000 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Stop Bootstrap grid from breaking layout */
+.top-bar-area .container,
+.top-bar-area .row {
+    height: 100% !important;
+    align-items: center !important;
+}
+
+/* LOGO CONTAINER — NO FLEX SHRINK */
+.logo {
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+}
+
+/* LOGO IMAGE — HARD SIZE */
+.logo img {
+    height: 60px !important;
+    width: auto !important;
+    max-height: 60px !important;
+    object-fit: contain !important;
+}
+
+/* Prevent UL from squeezing logo */
+.contact-info-left ul {
+    display: flex !important;
+    align-items: center !important;
+    gap: 24px;
+}
+
+/* NAV LINKS ALIGNMENT */
+.contact-info-left ul li {
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* ================================
+   PHASE 3: NAVIGATION KILL-SWITCH
+   STRICT LOGIC FOR MOBILE & DESKTOP
+================================ */
+
+/* DESKTOP: Show .top-bar-area, Hide mobile navs */
+@media (min-width: 1025px) {
+    .top-bar-area {
+        display: block !important;
+        visibility: visible !important;
+    }
+    .mobile-header-bar,
+    #mobileTopBar {
+        display: none !important;
+    }
+}
+
+/* MOBILE/TABLET: Hide .top-bar-area, Show mobile navs */
+@media (max-width: 1024px) {
+    .top-bar-area {
+        display: none !important;
+    }
+    .mobile-header-bar {
+        display: flex !important;
+        background: #0A0A0A;
+        position: sticky;
+        top: 0;
+        z-index: 99999;
+    }
+    #mobileTopBar {
+        display: none;
+        background: #0A0A0A;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 99998;
+        border-bottom: 2px solid #B8924E;
+    }
+    #mobileTopBar.active {
+        display: block !important;
+    }
+}
+
+/* ================================
+   PHASE 4: BOLD LUXE FOOTER STYLES
+================================ */
+
+/* Force footer background and structure */
+.luxe-footer {
+    background: #0A0A0A !important;
+    padding: 60px 0 40px !important;
+    border-top: 1px solid rgba(184, 146, 78, 0.2);
+}
+
+/* Force all footer text to bold white */
+.luxe-footer p,
+.luxe-footer a,
+.luxe-footer li,
+.luxe-footer span,
+.footer-col p,
+.footer-col a,
+.footer-col li {
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+}
+
+/* Footer headers - Gold (#B8924E), Weight 900, Uppercase */
+.luxe-footer h3,
+.luxe-footer h4,
+.footer-col h3,
+.footer-col h4 {
+    color: #B8924E !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    font-size: 16px !important;
+}
+
+/* Footer grid layout */
+.luxe-footer .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer logo styling */
+.footer-col .footer-logo img {
+    height: 50px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+/* Link hover effect: slide 8px right */
+.luxe-footer a {
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.luxe-footer a:hover {
+    transform: translateX(8px);
+    color: #B8924E !important;
+}
+
+/* Responsive footer grid */
+@media (max-width: 1024px) {
+    .luxe-footer .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30 px;
+    }
 }
